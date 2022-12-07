@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+
+    <head>
+        <title>Ahiruneko-Chan's Pronouns / Bio</title>
+        <style>
+            :root {
+                --background-color: #0c0026aa;
+                --border-color: #001153;
+                --page-font-family: Comic Sans Ms, Arial;
+                --text-color: white;
+                --scale: 1;
+                --marginTopBottom: 0px;
+                --marginLeftRight: 15px;
+                --footer-size: 50px;
+                --header-size: 50px;
+                /**/
+                /*var()*/
+            }
+
+            @media screen and (orientation: portrait) {
+                /*Vertical Detection. Is also used for when on a phone.*/
+                .row {
+                    flex-direction: column;
+                }
+                :root{
+                    --scale: 2;
+                    --marginTopBottom: 15px;
+                    --marginLeftRight: 0px;
+                }
+                body {
+                    /*background-image: url(https://bido67.github.io/discord-backgrounds-bido/Back_9x16Bigger.png) !important;*/
+                }
+            }
+
+            .pageTitle {
+                color: var(--text-color);
+                font-family: var(--page-font-family);
+            }
+
+            body {
+                background-color: black;
+                /*background-image: url("https://bido67.github.io/discord-backgrounds-bido/Back_FuckedBigger.png");*/
+                background-size: cover;
+                background-attachment: fixed;
+                background-position: center;
+                background-repeat: no-repeat;
+                padding: 0px;
+                margin: 0px;
+                opacity: 1 !important;
+            }
+            
+            div:not(.pageContainer):not(.link):not(.spacerHeader):not(.spacerFooter):not(.noPadding) {
+                padding: 10px;
+            }
+            div:not(.pageContainer):not(.link):not(.spacerHeader):not(.spacerFooter) {
+                box-sizing: border-box;
+                overflow: visible;
+            }
+            /*            div:not(.pageContainer):not(.link):not(.row):not(.footer):not(.header):not(.spacerHeader):not(.spacerFooter) */
+            div.subContainerStyle, div.Links, div.profilePicAndName
+            {
+                background-color: var(--background-color);
+                border-color: var(--border-color);
+                border-radius: 10px;
+                border-width: 2px;
+                border-style: solid;
+            }
+            div.profilePicAndName{
+                margin-bottom: 10px;
+            }
+            .Links {
+                width: 100%;
+                height: auto;
+            }
+
+            .container {
+                height: auto;
+                box-sizing: border-box;
+                display: flex;
+                justify-content: space-around;
+                padding-top: 2vh;
+                padding-bottom: 2vh;
+                padding-left: 2vw;
+                padding-right: 2vw;
+            }
+
+            .container.row:first-child {
+                border-bottom-width: 0px;
+                border-bottom-left-radius: 0px;
+                border-bottom-right-radius: 0px;
+            }
+
+            .container.row:last-child {
+                border-top-width: 0px;
+                border-top-left-radius: 0px;
+                border-top-right-radius: 0px;
+            }
+
+            .row {
+                width: 100%;
+            }
+            .rowFloatLeft{
+                width: 100%;
+                justify-content: flex-start;
+                padding: 0px;
+            }
+
+            .column {
+                width: calc(100vw - 4vw);
+                flex-direction: column;
+            }
+
+            .link {
+                box-sizing: border-box;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                height: 100%;
+                width: 100%;
+            }
+
+            .subContainer {
+                
+                height: auto;
+                width: 100%;
+                margin-top: var(--marginTopBottom);
+                margin-bottom: var(--marginTopBottom);
+                margin-left: var(--marginLeftRight);
+                margin-right: var(--marginLeftRight);
+                
+            }
+            .subContainerStyle{
+                background-color: var(--background-color);
+                color: var(--text-color);
+                font-family: var(--page-font-family);
+                border-color: var(--border-color);
+                border-width: 10px;
+                font-size: calc(20px * var(--scale));
+            }
+
+            .link>center>a {
+                margin: center;
+                font-size: calc(20px * var(--scale));
+                color: var(--text-color);
+                text-decoration: none;
+                vertical-align: middle;
+                height: calc(20px * var(--scale));
+            }
+
+            svg.linkArrow,
+            .link>center>a>img.linkIcon {
+                vertical-align: middle;
+                padding-bottom: 5px;
+                transform: scale(var(--scale))
+            }
+
+            svg.linkArrow {
+                width: calc(24px * var(--scale));
+                height: calc(24px * var(--scale));
+                fill: var(--text-color);
+                transform: rotate(45deg);
+            }
+
+            
+            footer {
+                --size: var(--footer-size);
+                bottom: 0px
+            }
+            header {
+                --size: var(--header-size);
+                top: 0px;
+                
+            }
+            header, footer{
+                position: fixed;
+                height: calc(var(--size));
+                width: 100vw;
+            }
+            div.footer, div.header{
+                width: 100%;
+                height: 100%;
+                background-color: var(--background-color);
+                border-color: var(--border-color);
+                border-radius: 0px;
+                border-width: 0px;
+                border-style: solid;
+                box-sizing: border-box;
+            }
+            div.header{
+                border-bottom-width: 2px;
+            }
+            div.footer{
+                border-top-width: 2px;
+            }
+            div.footer, a.madeBy{
+                color: var(--text-color);
+                font-family: var(--page-font-family);
+                text-decoration: none;
+            }
+            div.spacerHeader, div.spacerFooter {
+                width: 100vw;
+                opacity: 0;
+            }
+            div.spacerHeader{
+                height: calc(var(--header-size) + 10px);
+            }
+            div.spacerFooter{
+                height: calc(var(--footer-size) + 10px);
+            }
+            .profilePicAndName{
+                font-size: calc(20px * var(--scale));
+                width: max-content;
+                background-color: blue;
+                color: var(--text-color);
+                font-family: var(--page-font-family);
+                border-color: var(--border-color);
+                border-width: 10px;
+                background-color: transparent;
+                box-sizing: content;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                padding-left: 0px;
+            }
+            .profilePicAndName>center{
+                background-color: transparent;
+                box-sizing: content;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+            }
+            .profilePicAndName>center>.pfpText>h1 {
+                margin: center;
+                font-size: calc(35px * var(--scale));
+                color: var(--text-color);
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                text-decoration: none;
+                vertical-align: middle;
+                height: 100%;
+                white-space: nowrap;
+            }
+            .profilePicutre{
+                width: auto;
+                padding-top: 5px;
+                height: calc(100px * var(--scale));
+                border-radius: 50%;
+            }
+            .section{
+                top: 0px;
+                width: 100%;
+            }
+            .section>h4{
+                font-family: var(--page-font-family);
+                color: var(--text-color);
+                padding-left: 15px;
+                font-size: calc(25px * var(--scale));
+                text-align: start;
+            }
+            .section>p{
+                padding-left: 15px;
+                padding-right: 15px;
+                font-size: calc(20px * var(--scale));
+                text-align: justify;
+                
+            }
+            .aboutMe{
+                padding-bottom: 10px;
+                width: -webkit-fill-available;
+            }
+            .aboutMe>center>div{
+                margin-left: 10px;
+                width: calc(100% - 10px);
+            }
+            .SocialLinksTitle>.section>h4{
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+            .fillAvailableSpace{
+                width: -webkit-fill-available !important;
+            }
+            
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <div class="header">
+            <center>
+                <p class="pageTitle">Ahiruneko-Chan's Pronouns / Bio (This page is a build in progress)</p>
+            </center>
+        </div>
+        </header>
+        <div class="spacerHeader"></div>
+        <div class="pageContainer">
+            <center>
+                <div class="container column">
+                    <div class="container rowFloatLeft noPadding">
+                        <div class="profilePicAndName">
+                            <center >
+                                <div class="pfpDiv">
+                                    <img class="profilePicutre" src="./pfp.png" alt="Profile Picture"/>
+                                </div>
+                                <div class = "pfpText">
+                                    <h1>Ahiruneko-Chan</h1>
+                                </div>
+                        
+                            </center>
+                        </div>
+                        <div class="aboutMe fillAvailableSpace noPadding">
+                            <center class="fillAvailableSpace">
+                                <div class="subContainer subContainerStyle noPadding">
+                                    <div class="section noPadding">
+                                        <h4>About me</h4>
+                                        <p>Shy Catgirl</p>
+                                    </div>
+                                    
+                                </div>
+                            </center>
+                        </div>
+                    </div>
+                    <div class="Links">
+                        <div class="container row">
+                            <div class="subContainer noPadding SocialLinksTitle">
+                                <div class="section noPadding">
+                                    <h4>Social Links</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container row">
+                            <div class="subContainer subContainerStyle">
+                                <div class="link">
+                                    <center>
+                                        <a href="https://twitch.tv/bido67">
+                                            <img src="./logos/twitch.svg" class="TwitchLogo linkIcon" alt="Site Logo"/>
+                                            Bido67
+                                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="linkArrow"
+                                                role="img" width="24" height="24" viewBox="0 0 24 24">
+
+                                                <polygon fill="currentColor" fill-rule="nonzero"
+                                                    points="13 20 11 20 11 8 5.5 13.5 4.08 12.08 12 4.16 19.92 12.08 18.5 13.5 13 8">
+                                                </polygon>
+                                            </svg>
+                                        </a>
+                                    </center>
+                                </div>
+                            </div>
+                            <div class="subContainer subContainerStyle">
+                                <div class="link">
+                                    <center>
+                                        <a href="https://twitter.com/bbido67">
+                                            <img src="./logos/twitter.svg" class="linkIcon" alt="Site Logo"/>
+                                            BBido67
+                                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="linkArrow"
+                                                role="img" width="24" height="24" viewBox="0 0 24 24">
+
+                                                <polygon fill="currentColor" fill-rule="nonzero"
+                                                    points="13 20 11 20 11 8 5.5 13.5 4.08 12.08 12 4.16 19.92 12.08 18.5 13.5 13 8">
+                                                </polygon>
+                                            </svg>
+                                        </a>
+                                    </center>
+                                </div>
+                            </div>
+                            <div class="subContainer subContainerStyle">
+                                <div class="link">
+                                    <center>
+                                        <a href="https://youtube.com/@bido67">
+                                            <img src="./logos/youtube.svg" class="linkIcon" alt="Site Logo"/>
+                                            Bido67
+                                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="linkArrow"
+                                                role="img" width="24" height="24" viewBox="0 0 24 24">
+
+                                                <polygon fill="currentColor" fill-rule="nonzero"
+                                                    points="13 20 11 20 11 8 5.5 13.5 4.08 12.08 12 4.16 19.92 12.08 18.5 13.5 13 8">
+                                                </polygon>
+                                            </svg>
+                                        </a>
+                                    </center>
+                                </div>
+                            </div>
+                            <div class="subContainer subContainerStyle">
+                                <div class="link">
+                                    <center>
+                                        <a href="https://github.com/bido67">
+                                            <img src="./logos/github.svg" class="linkIcon" alt="Site Logo"/>
+                                            Bido67
+                                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="linkArrow"
+                                                role="img" width="24" height="24" viewBox="0 0 24 24">
+
+                                                <polygon fill="currentColor" fill-rule="nonzero"
+                                                    points="13 20 11 20 11 8 5.5 13.5 4.08 12.08 12 4.16 19.92 12.08 18.5 13.5 13 8">
+                                                </polygon>
+                                            </svg>
+                                        </a>
+                                    </center>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container row">
+                            <div class="subContainer subContainerStyle">
+                                <p>Theses</p>
+                            </div>
+                            <div class="subContainer subContainerStyle">
+                                <p>are</p>
+                            </div>
+                            <div class="subContainer subContainerStyle">
+                                <p>test objects</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </center>
+        </div>
+    <div class="spacerFooter"></div>
+    <footer>
+        <div class="footer">
+            <center>
+            This page was built by <a class="madeBy" href="https://github.com/bido67">bido67</a>. 
+            </center>
+        </div>
+    </footer>
+
+    </body>
+
+</html>
