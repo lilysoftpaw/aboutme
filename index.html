@@ -61,7 +61,7 @@
             color: var(--text-color);
             font-family: var(--page-font-family);
         }
-
+        
         body {
             background-color: black;
             background-image: url("https://bido67.github.io/discord-backgrounds-bido/Back_FuckedBigger.png");
@@ -72,6 +72,13 @@
             padding: 0px;
             margin: 0px;
             opacity: 1 !important;
+        }
+        .pageContainer {
+            width: 100vw
+        }
+        ::-webkit-scrollbar {
+            position: fixed;
+            display: none;
         }
 
         div:not(.pageContainer):not(.link):not(.spacerHeader):not(.spacerFooter):not(.noPadding) {
@@ -179,6 +186,21 @@
             text-decoration: none;
             vertical-align: middle;
             height: calc(20px * var(--scale));
+        }
+        div.linkDescriptionContainer {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            white-space: break-spaces;
+            height: 100%;
+        }
+        h4.linkDescriptionTitle {
+            white-space: break-spaces;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+        p.linkDescriptionText {
+            white-space: break-spaces;
         }
 
         svg.linkArrow,
@@ -392,11 +414,10 @@
                                 <div class="section noPadding">
                                     <h4>About me</h4>
                                     <p>
-                                        Shy Cat-Girl (Genderfluid) <br />No,
-                                        I won't be your girlfriend.<br />
-                                        Uhm I am either super friendly or a
-                                        full on bitch. No in between.
-                                        <br />LGBTQ+ <br />
+                                        Shy Cat-Girl (Genderfluid) <br/>
+                                        No, I won't be your girlfriend.<br/>
+                                        Uhm I am either super friendly or a full on bitch. No in between.<br/>
+                                        LGBTQ+ <br/>
                                         I like ducks :D
                                     </p>
                                 </div>
@@ -413,7 +434,7 @@
                             </div>
                         </div>-->
                     <div class="container row">
-                        <div class="subContainer subContainerStyle">
+                        <div class="subContainer subContainerStyle container column">
                             <div class="link">
                                 <center>
                                     <a href="https://twitch.tv/bido67">
@@ -422,9 +443,14 @@
                                         <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="linkArrow" role="img" width="24" height="24" viewBox="0 0 24 24">
                                             <polygon fill="currentColor" fill-rule="nonzero" points="13 20 11 20 11 8 5.5 13.5 4.08 12.08 12 4.16 19.92 12.08 18.5 13.5 13 8"></polygon>
                                         </svg>
+                                        <div class="linkDescription">
+                                            <h4 class="linkDescriptionTitle">Twitch Affiliate</h4>
+                                            <p class="linkDescriptionText">I've been affiliated on Twitch since May 2021</p>
+                                        </div>
                                     </a>
                                 </center>
                             </div>
+                            
                         </div>
                         <div class="subContainer subContainerStyle">
                             <div class="link">
@@ -435,6 +461,10 @@
                                         <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="linkArrow" role="img" width="24" height="24" viewBox="0 0 24 24">
                                             <polygon fill="currentColor" fill-rule="nonzero" points="13 20 11 20 11 8 5.5 13.5 4.08 12.08 12 4.16 19.92 12.08 18.5 13.5 13 8"></polygon>
                                         </svg>
+                                        <div class="linkDescription">
+                                            <h4 class="linkDescriptionTitle">My twitter</h4>
+                                            <p class="linkDescriptionText">Uh I don't know. I just post random stuff on there.</p>
+                                        </div>
                                     </a>
                                 </center>
                             </div>
@@ -448,6 +478,10 @@
                                         <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="linkArrow" role="img" width="24" height="24" viewBox="0 0 24 24">
                                             <polygon fill="currentColor" fill-rule="nonzero" points="13 20 11 20 11 8 5.5 13.5 4.08 12.08 12 4.16 19.92 12.08 18.5 13.5 13 8"></polygon>
                                         </svg>
+                                        <div class="linkDescription">
+                                            <h4 class="linkDescriptionTitle">My channel</h4>
+                                            <p class="linkDescriptionText">I do not really post things on youtube but hey you can sub if you want :D</p>
+                                        </div>
                                     </a>
                                 </center>
                             </div>
@@ -461,6 +495,10 @@
                                         <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="linkArrow" role="img" width="24" height="24" viewBox="0 0 24 24">
                                             <polygon fill="currentColor" fill-rule="nonzero" points="13 20 11 20 11 8 5.5 13.5 4.08 12.08 12 4.16 19.92 12.08 18.5 13.5 13 8"></polygon>
                                         </svg>
+                                        <div class="linkDescriptionContainer">
+                                            <h4 class="linkDescriptionTitle">My github</h4>
+                                            <p class="linkDescriptionText">This page is hosted on here!</p>
+                                        </div>
                                     </a>
                                 </center>
                             </div>
@@ -478,6 +516,10 @@
                                         <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="linkArrow" role="img" width="24" height="24" viewBox="0 0 24 24">
                                             <polygon fill="currentColor" fill-rule="nonzero" points="13 20 11 20 11 8 5.5 13.5 4.08 12.08 12 4.16 19.92 12.08 18.5 13.5 13 8"></polygon>
                                         </svg>
+                                        <div class="linkDescriptionContainer">
+                                            <h4 class="linkDescriptionTitle">My discord server!</h4>
+                                            <p class="linkDescriptionText">This is my discord server where you can come chat with my Twitch Community or even me!</p>
+                                        </div>
                                     </a>
                                 </center>
                             </div>
@@ -491,6 +533,10 @@
                                         <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="linkArrow" role="img" width="24" height="24" viewBox="0 0 24 24">
                                             <polygon fill="currentColor" fill-rule="nonzero" points="13 20 11 20 11 8 5.5 13.5 4.08 12.08 12 4.16 19.92 12.08 18.5 13.5 13 8"></polygon>
                                         </svg>
+                                        <div class="linkDescriptionContainer">
+                                            <h4 class="linkDescriptionTitle">My reddit</h4>
+                                            <p class="linkDescriptionText">Uh I don't have an idea for this description</p>
+                                        </div>
                                     </a>
                                 </center>
                             </div>
@@ -504,6 +550,10 @@
                                         <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="linkArrow" role="img" width="24" height="24" viewBox="0 0 24 24">
                                             <polygon fill="currentColor" fill-rule="nonzero" points="13 20 11 20 11 8 5.5 13.5 4.08 12.08 12 4.16 19.92 12.08 18.5 13.5 13 8"></polygon>
                                         </svg>
+                                        <div class="linkDescriptionContainer">
+                                            <h4 class="linkDescriptionTitle">My tiktok</h4>
+                                            <p class="linkDescriptionText">I do not use this. I just have it because I have it</p>
+                                        </div>
                                     </a>
                                 </center>
                             </div>
