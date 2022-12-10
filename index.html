@@ -85,13 +85,16 @@
 
         /*            div:not(.pageContainer):not(.link):not(.row):not(.footer):not(.header):not(.spacerHeader):not(.spacerFooter) */
         div.subContainerStyle,
-        div.Links,
+        div.ContainerStyle,
         div.profilePicAndName {
             background-color: var(--background-color);
             border-color: var(--border-color);
             border-radius: 10px;
             border-width: 2px;
             border-style: solid;
+        }
+        div.ContainerStyle{
+            margin-bottom: 10px;
         }
 
         div.profilePicAndName {
@@ -401,7 +404,7 @@
                         </center>
                     </div>
                 </div>
-                <div class="Links">
+                <div id="links" class="ContainerStyle">
                     <!--<div class="container row">
                             <div class="subContainer noPadding SocialLinksTitle">
                                 <div class="section noPadding">
@@ -506,6 +509,9 @@
                             </div>
                         </div>
                     </div>
+                    
+                </div>
+                <div id="basicInfo" class="ContainerStyle">
                     <div class="container row">
                         <div class="subContainer subContainerStyle">
                             <div class="section noPadding">
@@ -553,8 +559,8 @@
                             </div>
                         </div>
                         <!--<div class="subContainer subContainerStyle">
-                                <p>an empty box</p>bruh
-                            </div>-->
+                            <p>an empty box</p>bruh
+                        </div>-->
                     </div>
                 </div>
             </div>
