@@ -13,382 +13,18 @@
     <meta name="twitter:site" content="@bbido67">
     <!-- testing something -->
     <meta name="msapplication-navbutton-color" content="#001153">
-    <!-- stupid page build failure-->
-    <!-- The site lol: -->
-    <style>
-        :root {
-            --background-color: #0c0026aa;
-            --border-color: #001153;
-            --page-font-family: Comic Sans Ms, Arial;
-            --text-color: white;
-            --scale: 1;
-            --marginTopBottom: 0px;
-            --marginLeftRight: 15px;
-            --footer-size: 50px;
-            --header-size: 50px;
-            /**/
-            /*var()*/
-        }
-
-        @media screen and (orientation: portrait) {
-
-            /*Vertical Detection. Is also used for when on a phone.*/
-            .row {
-                flex-direction: column;
-            }
-
-            .rowFloatLeft {
-                flex-direction: column;
-            }
-
-            .profilePicAndName {
-                margin-left: 10px;
-                width: calc(100% - 10px) !important;
-            }
-
-            :root {
-                --scale: 2;
-                --marginTopBottom: 15px;
-                --marginLeftRight: 0px;
-            }
-
-            body {
-                background-image: url(https://bido67.github.io/discord-backgrounds-bido/Back_9x16Bigger.png) !important;
-            }
-        }
-
-        .pageTitle {
-            color: var(--text-color);
-            font-family: var(--page-font-family);
-        }
-        
-        body {
-            background-color: black;
-            background-image: url("https://bido67.github.io/discord-backgrounds-bido/Back_FuckedBigger.png");
-            background-size: cover;
-            background-attachment: fixed;
-            background-position: center;
-            background-repeat: no-repeat;
-            padding: 0px;
-            margin: 0px;
-            opacity: 1 !important;
-        }
-        .pageContainer {
-            width: 100vw
-        }
-        ::-webkit-scrollbar {
-            position: fixed;
-            display: none;
-        }
-
-        div:not(.pageContainer):not(.link):not(.spacerHeader):not(.spacerFooter):not(.noPadding) {
-            padding: 10px;
-        }
-
-        div:not(.pageContainer):not(.link):not(.spacerHeader):not(.spacerFooter) {
-            box-sizing: border-box;
-            overflow: visible;
-        }
-
-        /*            div:not(.pageContainer):not(.link):not(.row):not(.footer):not(.header):not(.spacerHeader):not(.spacerFooter) */
-        div.subContainerStyle,
-        div.ContainerStyle,
-        div.profilePicAndName {
-            background-color: var(--background-color);
-            border-color: var(--border-color);
-            border-radius: 10px;
-            border-width: 2px;
-            border-style: solid;
-        }
-        div.ContainerStyle{
-            margin-bottom: 10px;
-        }
-
-        div.profilePicAndName {
-            margin-bottom: 10px;
-        }
-
-        .Links {
-            width: 100%;
-            height: auto;
-        }
-
-        .container {
-            height: auto;
-            box-sizing: border-box;
-            display: flex;
-            justify-content: space-around;
-            padding-top: 2vh;
-            padding-bottom: 2vh;
-            padding-left: 2vw;
-            padding-right: 2vw;
-        }
-
-        .container.row:first-child {
-            border-bottom-width: 0px;
-            border-bottom-left-radius: 0px;
-            border-bottom-right-radius: 0px;
-        }
-
-        .container.row:last-child {
-            border-top-width: 0px;
-            border-top-left-radius: 0px;
-            border-top-right-radius: 0px;
-        }
-
-        .row {
-            width: 100%;
-        }
-
-        .rowFloatLeft {
-            width: 100%;
-            justify-content: flex-start;
-            padding: 0px;
-        }
-
-        .column {
-            width: calc(100vw - 4vw);
-            flex-direction: column;
-        }
-
-        .link {
-            box-sizing: border-box;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            height: 100%;
-            width: 100%;
-        }
-
-        .subContainer {
-            height: auto;
-            width: 100%;
-            margin-top: var(--marginTopBottom);
-            margin-bottom: var(--marginTopBottom);
-            margin-left: var(--marginLeftRight);
-            margin-right: var(--marginLeftRight);
-        }
-
-        .subContainerStyle {
-            background-color: var(--background-color);
-            color: var(--text-color);
-            font-family: var(--page-font-family);
-            border-color: var(--border-color);
-            border-width: 10px;
-            font-size: calc(20px * var(--scale));
-        }
-
-        .link>center>a {
-            white-space: nowrap;
-            margin: center;
-            font-size: calc(20px * var(--scale));
-            color: var(--text-color);
-            text-decoration: none;
-            vertical-align: middle;
-            height: calc(20px * var(--scale));
-        }
-        div.linkDescriptionContainer {
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            white-space: break-spaces;
-            height: 100%;
-        }
-        h4.linkDescriptionTitle {
-            white-space: break-spaces;
-            margin-top: 5px;
-            margin-bottom: 5px;
-        }
-        p.linkDescriptionText {
-            white-space: break-spaces;
-        }
-
-        svg.linkArrow,
-        .link>center>a>img.linkIcon {
-            vertical-align: middle;
-            padding-bottom: 5px;
-            transform: scale(var(--scale));
-        }
-
-        svg.linkArrow {
-            width: calc(24px * var(--scale));
-            height: calc(24px * var(--scale));
-            fill: var(--text-color);
-            transform: rotate(45deg);
-        }
-
-        footer {
-            --size: var(--footer-size);
-            bottom: 0px;
-        }
-
-        header {
-            --size: var(--header-size);
-            top: 0px;
-        }
-
-        header,
-        footer {
-            position: fixed;
-            height: calc(var(--size));
-            width: 100vw;
-        }
-
-        div.footer,
-        div.header {
-            width: 100%;
-            height: 100%;
-            background-color: var(--background-color);
-            border-color: var(--border-color);
-            border-radius: 0px;
-            border-width: 0px;
-            border-style: solid;
-            box-sizing: border-box;
-        }
-
-        div.header {
-            border-bottom-width: 2px;
-        }
-
-        div.footer {
-            border-top-width: 2px;
-        }
-
-        div.footer,
-        a.madeBy {
-            color: var(--text-color);
-            font-family: var(--page-font-family);
-            text-decoration: none;
-        }
-
-        div.spacerHeader,
-        div.spacerFooter {
-            width: 100vw;
-            opacity: 0;
-        }
-
-        div.spacerHeader {
-            height: calc(var(--header-size) + 10px);
-        }
-
-        div.spacerFooter {
-            height: calc(var(--footer-size) + 10px);
-        }
-
-        .profilePicAndName {
-            font-size: calc(20px * var(--scale));
-            width: max-content;
-            background-color: blue;
-            color: var(--text-color);
-            font-family: var(--page-font-family);
-            border-color: var(--border-color);
-            border-width: 10px;
-            background-color: transparent;
-            box-sizing: content;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            padding-left: 0px;
-        }
-
-        .profilePicAndName>center {
-            background-color: transparent;
-            box-sizing: content;
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-        }
-
-        .profilePicAndName>center>.pfpText>h1 {
-            margin: center;
-            font-size: calc(35px * var(--scale));
-            color: var(--text-color);
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            text-decoration: none;
-            vertical-align: middle;
-            height: 100%;
-            white-space: nowrap;
-        }
-
-        .profilePicutre {
-            width: auto;
-            padding-top: 5px;
-            height: calc(100px * var(--scale));
-            border-radius: 50%;
-        }
-
-        .section {
-            top: 0px;
-            width: 100%;
-        }
-
-        .section>h4 {
-            font-family: var(--page-font-family);
-            color: var(--text-color);
-            padding-left: 15px;
-            font-size: calc(30px * var(--scale));
-            text-align: start;
-        }
-
-        .section>h5 {
-            font-family: var(--page-font-family);
-            color: var(--text-color);
-            padding-left: 15px;
-            font-size: calc(25px * var(--scale));
-            text-align: center;
-            margin: 5px 0px;
-        }
-
-        .section>ul>li {
-            font-size: calc(20px * var(--scale));
-        }
-
-        .section>ul>li>p {
-            padding-left: 15px;
-            padding-right: 15px;
-            font-size: calc(20px * var(--scale));
-            text-align: justify;
-        }
-
-        .section>p {
-            padding-left: 15px;
-            padding-right: 15px;
-            font-size: calc(20px * var(--scale));
-            text-align: justify;
-        }
-
-        .aboutMe {
-            padding-bottom: 10px;
-            width: -webkit-fill-available;
-        }
-
-        .aboutMe>center>div {
-            margin-left: 10px;
-            width: calc(100% - 10px);
-        }
-
-        .SocialLinksTitle>.section>h4 {
-            margin-top: 10px;
-            margin-bottom: 10px;
-        }
-
-        .fillAvailableSpace {
-            width: -webkit-fill-available !important;
-            width: -moz-available !important;
-        }
-    </style>
+    <!-- The style sheet -->
+    <link rel="stylesheet" href="./styles.css">
+    <!--the site lol-->
 </head>
 
 <body>
     <header>
         <div class="header">
             <center>
-                <p class="pageTitle">
-                    Ahiruneko-Chan's Pronouns / Bio (This page is a build in
-                    progress)
-                </p>
+                <div class="pageHeader">
+                    Ahiruneko-Chan's Pronouns / Bio (This page is a WIP)
+                </div>
             </center>
         </div>
     </header>
@@ -403,17 +39,16 @@
                                 <img class="profilePicutre" src="./pfp.png" alt="Profile Picture" />
                             </div>
                             <div class="pfpText">
-                                <h1>Ahiruneko-Chan</h1>
+                                <h2 class="nowrap">Ahiruneko-Chan</h2>
                             </div>
                         </center>
                     </div>
                     <div class="aboutMe fillAvailableSpace noPadding">
                         <center class="fillAvailableSpace">
-                            <div class="subContainer subContainerStyle
-                                    noPadding">
-                                <div class="section noPadding">
-                                    <h4>About me</h4>
-                                    <p>
+                            <div class="subContainer subContainerStyle noPadding">
+                                <div class="section">
+                                    <h3 class="aboutMe">About me</h3>
+                                    <p class="aboutMe">
                                         Shy Cat-Girl (Genderfluid) <br/>
                                         No, I won't be your girlfriend.<br/>
                                         Uhm I am either super friendly or a full on bitch. No in between.<br/>
@@ -438,13 +73,15 @@
                             <div class="link">
                                 <center>
                                     <a href="https://twitch.tv/bido67">
-                                        <img src="./logos/twitch.svg" class="TwitchLogo linkIcon" alt="Site Logo" height="24" width="24"/>
-                                        Bido67
-                                        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="linkArrow" role="img" width="24" height="24" viewBox="0 0 24 24">
-                                            <polygon fill="currentColor" fill-rule="nonzero" points="13 20 11 20 11 8 5.5 13.5 4.08 12.08 12 4.16 19.92 12.08 18.5 13.5 13 8"></polygon>
-                                        </svg>
+                                        <div class="linkName">
+                                            <img src="./logos/twitch.svg" class="TwitchLogo linkIcon" alt="Site Logo" height="24" width="24"/>
+                                            <p>Bido67</p>
+                                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="linkArrow" role="img" width="24" height="24" viewBox="0 0 24 24">
+                                                <polygon fill="currentColor" fill-rule="nonzero" points="13 20 11 20 11 8 5.5 13.5 4.08 12.08 12 4.16 19.92 12.08 18.5 13.5 13 8"></polygon>
+                                            </svg>
+                                        </div>
                                         <div class="linkDescription">
-                                            <h4 class="linkDescriptionTitle">Twitch Affiliate</h4>
+                                            <h6 class="linkDescriptionTitle">Twitch Affiliate</h6>
                                             <p class="linkDescriptionText">I've been affiliated on Twitch since May 2021</p>
                                         </div>
                                     </a>
@@ -456,13 +93,15 @@
                             <div class="link">
                                 <center>
                                     <a href="https://twitter.com/bbido67">
-                                        <img src="./logos/twitter.svg" class="linkIcon" alt="Site Logo" />
-                                        BBido67
-                                        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="linkArrow" role="img" width="24" height="24" viewBox="0 0 24 24">
-                                            <polygon fill="currentColor" fill-rule="nonzero" points="13 20 11 20 11 8 5.5 13.5 4.08 12.08 12 4.16 19.92 12.08 18.5 13.5 13 8"></polygon>
-                                        </svg>
+                                        <div class="linkName">
+                                            <img src="./logos/twitter.svg" class="linkIcon" alt="Site Logo" />
+                                            <p>BBido67</p>
+                                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="linkArrow" role="img" width="24" height="24" viewBox="0 0 24 24">
+                                                <polygon fill="currentColor" fill-rule="nonzero" points="13 20 11 20 11 8 5.5 13.5 4.08 12.08 12 4.16 19.92 12.08 18.5 13.5 13 8"></polygon>
+                                            </svg>
+                                            </div>
                                         <div class="linkDescription">
-                                            <h4 class="linkDescriptionTitle">My twitter</h4>
+                                            <h6 class="linkDescriptionTitle">My twitter</h6>
                                             <p class="linkDescriptionText">Uh I don't know. I just post random stuff on there.</p>
                                         </div>
                                     </a>
@@ -473,13 +112,15 @@
                             <div class="link">
                                 <center>
                                     <a href="https://youtube.com/@bido67">
-                                        <img src="./logos/youtube.svg" class="linkIcon" alt="Site Logo" />
-                                        Bido67
-                                        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="linkArrow" role="img" width="24" height="24" viewBox="0 0 24 24">
-                                            <polygon fill="currentColor" fill-rule="nonzero" points="13 20 11 20 11 8 5.5 13.5 4.08 12.08 12 4.16 19.92 12.08 18.5 13.5 13 8"></polygon>
-                                        </svg>
+                                        <div class="linkName">
+                                            <img src="./logos/youtube.svg" class="linkIcon" alt="Site Logo" />
+                                            <p>Bido67</p>
+                                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="linkArrow" role="img" width="24" height="24" viewBox="0 0 24 24">
+                                                <polygon fill="currentColor" fill-rule="nonzero" points="13 20 11 20 11 8 5.5 13.5 4.08 12.08 12 4.16 19.92 12.08 18.5 13.5 13 8"></polygon>
+                                            </svg>
+                                        </div>
                                         <div class="linkDescription">
-                                            <h4 class="linkDescriptionTitle">My channel</h4>
+                                            <h6 class="linkDescriptionTitle">My channel</h6>
                                             <p class="linkDescriptionText">I do not really post things on youtube but hey you can sub if you want :D</p>
                                         </div>
                                     </a>
@@ -490,13 +131,15 @@
                             <div class="link">
                                 <center>
                                     <a href="https://github.com/bido67">
-                                        <img src="./logos/github.svg" class="linkIcon" alt="Site Logo" />
-                                        Bido67
-                                        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="linkArrow" role="img" width="24" height="24" viewBox="0 0 24 24">
-                                            <polygon fill="currentColor" fill-rule="nonzero" points="13 20 11 20 11 8 5.5 13.5 4.08 12.08 12 4.16 19.92 12.08 18.5 13.5 13 8"></polygon>
-                                        </svg>
+                                        <div class="linkName">
+                                            <img src="./logos/github.svg" class="linkIcon" alt="Site Logo" />
+                                            <p>Bido67</p>
+                                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="linkArrow" role="img" width="24" height="24" viewBox="0 0 24 24">
+                                                <polygon fill="currentColor" fill-rule="nonzero" points="13 20 11 20 11 8 5.5 13.5 4.08 12.08 12 4.16 19.92 12.08 18.5 13.5 13 8"></polygon>
+                                            </svg>
+                                        </div>
                                         <div class="linkDescriptionContainer">
-                                            <h4 class="linkDescriptionTitle">My github</h4>
+                                            <h6 class="linkDescriptionTitle">My github</h6>
                                             <p class="linkDescriptionText">This page is hosted on here!</p>
                                         </div>
                                     </a>
@@ -511,13 +154,15 @@
                             <div class="link">
                                 <center>
                                     <a href="https://discord.gg/bnSrkHT">
-                                        <img src="./logos/discord.png" class="linkIcon noPadding" alt="Site Logo" height="24" width="24" style="border-radius: 50%;background-color: #5865f2;padding-bottom: 0px !important;margin-right: 5px;" />
-                                        Duck Lands
-                                        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="linkArrow" role="img" width="24" height="24" viewBox="0 0 24 24">
-                                            <polygon fill="currentColor" fill-rule="nonzero" points="13 20 11 20 11 8 5.5 13.5 4.08 12.08 12 4.16 19.92 12.08 18.5 13.5 13 8"></polygon>
-                                        </svg>
+                                        <div class="linkName">
+                                            <img src="./logos/discord.png" class="linkIcon noPadding" alt="Site Logo" height="24" width="24" style="border-radius: 50%;background-color: #5865f2;padding-bottom: 0px !important;margin-right: 5px;" />
+                                            <p>Duck Lands</p>
+                                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="linkArrow" role="img" width="24" height="24" viewBox="0 0 24 24">
+                                                <polygon fill="currentColor" fill-rule="nonzero" points="13 20 11 20 11 8 5.5 13.5 4.08 12.08 12 4.16 19.92 12.08 18.5 13.5 13 8"></polygon>
+                                            </svg>
+                                        </div>
                                         <div class="linkDescriptionContainer">
-                                            <h4 class="linkDescriptionTitle">My discord server!</h4>
+                                            <h6 class="linkDescriptionTitle">My discord server!</h6>
                                             <p class="linkDescriptionText">This is my discord server where you can come chat with my Twitch Community or even me!</p>
                                         </div>
                                     </a>
@@ -528,13 +173,15 @@
                             <div class="link">
                                 <center>
                                     <a href="https://www.reddit.com/user/Bido67">
-                                        <img src="./logos/reddit.svg" class="linkIcon noPadding" alt="Site Logo" height="29" width="24" />
-                                        Bido67
-                                        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="linkArrow" role="img" width="24" height="24" viewBox="0 0 24 24">
-                                            <polygon fill="currentColor" fill-rule="nonzero" points="13 20 11 20 11 8 5.5 13.5 4.08 12.08 12 4.16 19.92 12.08 18.5 13.5 13 8"></polygon>
-                                        </svg>
+                                        <div class="linkName">
+                                            <img src="./logos/reddit.svg" class="linkIcon noPadding" alt="Site Logo" height="29" width="24" />
+                                            <p>Bido67</p>
+                                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="linkArrow" role="img" width="24" height="24" viewBox="0 0 24 24">
+                                                <polygon fill="currentColor" fill-rule="nonzero" points="13 20 11 20 11 8 5.5 13.5 4.08 12.08 12 4.16 19.92 12.08 18.5 13.5 13 8"></polygon>
+                                            </svg>
+                                        </div>
                                         <div class="linkDescriptionContainer">
-                                            <h4 class="linkDescriptionTitle">My reddit</h4>
+                                            <h6 class="linkDescriptionTitle">My reddit</h6>
                                             <p class="linkDescriptionText">Uh I don't have an idea for this description</p>
                                         </div>
                                     </a>
@@ -545,13 +192,15 @@
                             <div class="link">
                                 <center>
                                     <a href="https://tiktok.com/@bbido67">
-                                        <img src="./logos/tiktok.svg" class="linkIcon" alt="Site Logo" height="24" width="29" />
-                                        BBido67
-                                        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="linkArrow" role="img" width="24" height="24" viewBox="0 0 24 24">
-                                            <polygon fill="currentColor" fill-rule="nonzero" points="13 20 11 20 11 8 5.5 13.5 4.08 12.08 12 4.16 19.92 12.08 18.5 13.5 13 8"></polygon>
-                                        </svg>
+                                        <div class="linkName">
+                                            <img src="./logos/tiktok.svg" class="linkIcon" alt="Site Logo" height="24" width="29" />
+                                            <p>BBido67</p>
+                                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="linkArrow" role="img" width="24" height="24" viewBox="0 0 24 24">
+                                                <polygon fill="currentColor" fill-rule="nonzero" points="13 20 11 20 11 8 5.5 13.5 4.08 12.08 12 4.16 19.92 12.08 18.5 13.5 13 8"></polygon>
+                                            </svg>
+                                        </div>
                                         <div class="linkDescriptionContainer">
-                                            <h4 class="linkDescriptionTitle">My tiktok</h4>
+                                            <h6 class="linkDescriptionTitle">My tiktok</h6>
                                             <p class="linkDescriptionText">I do not use this. I just have it because I have it</p>
                                         </div>
                                     </a>
@@ -578,7 +227,7 @@
                         </div>
                         <div class="subContainer subContainerStyle">
                             <div class="section noPadding">
-                                <h5>Names</h5>
+                                <h5 class="sectionTitle">Names</h5>
                                 <ul>
                                     <li>
                                         <p>Ahiruneko-Chan</p>
