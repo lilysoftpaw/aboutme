@@ -1,4 +1,6 @@
 :root {
+    --background-image-horizontal: url("./images/background_horizontal.png");
+    --background-image-vertical: url("./images/background_vertical.png");
     --background-color: #0c0026aa;
     --border-color: #001153;
     --border-width: 2px;
@@ -71,7 +73,7 @@ a{
         --marginLeftRight: 0px;
     }
     body {
-        background-image: url(https://bido67.github.io/discord-backgrounds-bido/Back_9x16Bigger.png) !important;
+        background-image: var(--background-image-vertical) !important;
     }
 }
 
@@ -135,7 +137,7 @@ a{
 
 body {
     background-color: black;
-    background-image: url("https://bido67.github.io/discord-backgrounds-bido/Back_FuckedBigger.png");
+    background-image: var(--background-image-horizontal);
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
