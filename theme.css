@@ -179,7 +179,7 @@ div.ContainerStyle,
 div.profilePicAndName {
     background-color: var(--background-color);
     border-color: var(--border-color);
-    border-radius: 10px;
+    border-radius: var(--border-radius);
     border-width: var(--border-width);
     border-style: solid;
 }
