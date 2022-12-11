@@ -1,3 +1,6 @@
+/*
+theme settings in theme_settings.css
+
 :root {
     --background-image-horizontal: url("./images/background_horizontal.png");
     --background-image-vertical: url("./images/background_vertical.png");
@@ -7,13 +10,19 @@
     --page-font-family: Comic Sans Ms, Arial;
     --text-color: white;
     --scale: 1;
+    --scale-vertical: 2;
     --margin-column-spaceing: 10px;
-    --marginTopBottom: 0px;
-    --marginLeftRight: var(--margin-column-spaceing);
     --footer-size: 50px;
     --header-size: 50px;
     --font-size-base: 18px;
     --font-size-increment: 3px;
+}
+*/
+
+
+:root {
+    --marginTopBottom: 0px;
+    --marginLeftRight: var(--margin-column-spaceing);
     --font-size-a: var(--font-size-base);
     --font-size-p: var(--font-size-base);
     --font-size-h6: calc(var(--font-size-p) + var(--font-size-increment));
@@ -68,7 +77,7 @@ a{
         flex-direction: column;
     }
     :root {
-        --scale: 2;
+        --scale: var(--scale-vertical);
         --marginTopBottom: var(--margin-column-spaceing);
         --marginLeftRight: 0px;
     }

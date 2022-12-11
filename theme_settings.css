@@ -1,0 +1,16 @@
+:root {
+    --background-image-horizontal: url("./images/background_horizontal.png");
+    --background-image-vertical: url("./images/background_vertical.png");
+    --background-color: #0c0026aa;
+    --border-color: #001153;
+    --border-width: 2px;
+    --page-font-family: Comic Sans Ms, Arial;
+    --text-color: white;
+    --scale: 1;
+    --scale-vertical: 2;
+    --margin-column-spaceing: 10px;
+    --footer-size: 50px;
+    --header-size: 50px;
+    --font-size-base: 18px;
+    --font-size-increment: 3px;
+}
