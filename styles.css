@@ -276,7 +276,7 @@ div.profilePicAndName {
     height: calc(20px * var(--scale));
 }
 .linkName>p{
-    margin-left: 5px;
+    margin-left: calc(5px * var(--scale));
 }
 .linkDescriptionContainer {
     display: flex;
@@ -297,9 +297,11 @@ div.profilePicAndName {
 }
 
 svg.linkArrow,
+img.linkIcon,
 .link>center>a>img.linkIcon {
     vertical-align: middle;
     padding-bottom: 5px;
+    margin-left: 5px;
     transform: scale(var(--scale));
 }
 
