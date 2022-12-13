@@ -1,0 +1,36 @@
+:root {
+    --dark-background-color-page: black;
+    --dark-background-image-horizontal: url("./images/background_horizontal.png");
+    --dark-background-image-vertical: url("./images/background_vertical.png");
+    --dark-background-color: #0c0026aa;
+    --dark-background-color-hover: #210069aa;
+    --dark-button-color: #0c0026;
+    --dark-button-color-hover: #210069;
+    --dark-border-color: #001153;
+    --dark-text-color: white;
+
+    --light-background-color-page: white;
+    --light-background-image-horizontal: url("./images/background_horizontal.png");
+    --light-background-image-vertical: url("./images/background_vertical.png");
+    --light-background-color: #f0f0f0bc;
+    --light-background-color-hover: #a7a7a7bc;
+    --light-button-color: #f0f0f0;
+    --light-button-color-hover: #a7a7a7;
+    --light-border-color: #002fe9;
+    --light-text-color: black;
+
+    --buttonSpacing: 5px;
+    --scrollbar-width: 10px;
+    --border-width: 2px;
+    --border-radius: 10px;
+    --page-font-family: Comic Sans Ms, Arial;
+    --scale: 1;
+    --scale-vertical: 2;
+    --margin-column-spaceing: 10px;
+    --footer-size: 50px;
+    --header-size: 50px;
+    --font-size-base: 18px;
+    --font-size-increment: 3px;
+}
+
+
