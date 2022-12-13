@@ -18,7 +18,74 @@ theme settings in theme_settings.css
     --font-size-increment: 3px;
 }
 */
+@media (prefers-color-scheme: dark) {
+    html.dark {
+        --background-color-page: var(--dark-background-color-page);
+        --background-image-horizontal: var(--dark-background-image-horizontal);
+        --background-image-vertical: var(--dark-background-image-horizontal);
+        --background-color:  var(--dark-background-color);
+        --background-color-hover : var(--dark-background-color-hover);
+        --button-color:  var(--dark-button-color);
+        --button-color-hover:  var(--dark-button-color-hover);
+        --border-color: var(--dark-border-color);
+        --text-color: var(--dark-text-color);
 
+        --button-color-opposite-theme: var(--light-button-color);
+        --text-color-opposite-theme: var(--light-text-color);
+        --border-color-opposite-theme: var(--light-border-color);
+    }
+  }
+  
+  @media (prefers-color-scheme: light) {
+    html.light {
+        
+        --background-color-page: var(--light-background-color-page);
+        --background-image-horizontal: var(--light-background-image-horizontal);
+        --background-image-vertical: var(--light-background-image-horizontal);
+        --background-color:  var(--light-background-color);
+        --background-color-hover : var(--light-background-color-hover);
+        --button-color:  var(--light-button-color);
+        --button-color-hover:  var(--light-button-color-hover);
+        --border-color: var(--light-border-color);
+        --text-color: var(--light-text-color);
+
+        --button-color-opposite-theme: var(--dark-button-color);
+        --text-color-opposite-theme: var(--dark-text-color);
+        --border-color-opposite-theme: var(--dark-border-color);
+    }
+  }
+
+html.darkForce {
+    --background-color-page: var(--dark-background-color-page) !important;
+    --background-image-horizontal: var(--dark-background-image-horizontal) !important;
+    --background-image-vertical: var(--dark-background-image-horizontal) !important;
+    --background-color:  var(--dark-background-color) !important;
+    --background-color-hover : var(--dark-background-color-hover) !important;
+    --button-color:  var(--dark-button-color) !important;
+    --button-color-hover:  var(--dark-button-color-hover) !important;
+    --border-color: var(--dark-border-color) !important;
+    --text-color: var(--dark-text-color) !important;
+
+
+    --button-color-opposite-theme: var(--light-button-color) !important;
+    --text-color-opposite-theme: var(--light-text-color) !important;
+    --border-color-opposite-theme: var(--light-border-color) !important;
+}
+html.lightForce {
+    --background-color-page: var(--light-background-color-page) !important;
+    --background-image-horizontal: var(--light-background-image-horizontal) !important;
+    --background-image-vertical: var(--light-background-image-horizontal) !important;
+    --background-color:  var(--light-background-color) !important;
+    --background-color-hover : var(--light-background-color-hover) !important;
+    --button-color:  var(--light-button-color) !important;
+    --button-color-hover:  var(--light-button-color-hover) !important;
+    --border-color: var(--light-border-color) !important;
+    --text-color: var(--light-text-color) !important;
+
+    --button-color-opposite-theme: var(--dark-button-color) !important;
+    --text-color-opposite-theme: var(--dark-text-color) !important;
+    --border-color-opposite-theme: var(--dark-border-color) !important;
+}
 
 :root {
     --marginTopBottom: 0px;
@@ -33,6 +100,68 @@ theme settings in theme_settings.css
     --font-size-h1: calc(var(--font-size-h2) + var(--font-size-increment));
     /**/
     /*var()*/
+}
+html, body 
+{ 
+ overflow-x: hidden
+}
+::-webkit-scrollbar {
+    display:block;
+    z-index: 5;
+    position: fixed;
+    width: var(--scrollbar-width);
+    height: var(--scrollbar-width);
+}
+::-webkit-scrollbar-track {
+    top: var(--header-size);
+    height: calc(100vh - var(--header-size) - var(--footer-size) - (2* var(--border-width)));
+    border-color: transparent;
+    background-color: var(--button-color);
+    border: var(--border-width) solid transparent;
+}
+::-webkit-scrollbar-thumb {
+    background-clip: padding-box;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    background-color: var(--border-color);
+    min-height: 40px;
+}
+/*
+::-webkit-scrollbar-track-piece:start {
+    background: transparent url('./images/backgrounds/scrollbar.png') repeat-y !important;
+}
+::-webkit-scrollbar-track {
+    background: transparent url('./images/backgrounds/scrollbar.png') repeat-y !important;
+}
+
+::-webkit-scrollbar-track-piece:end {
+    background: transparent url('./images/backgrounds/scrollbar.png') repeat-y !important;
+}*/
+#themeButton, #themeButton button{
+    height: var(--header-size);
+    width: calc(var(--header-size)*3);
+    right: 0px;
+    top: 0px;
+    position: fixed;
+    pointer-events: auto;
+}
+#themeButton button {
+    height: calc(var(--header-size) - (var(--buttonSpacing)*2));
+    /*width: calc(var(--header-size) - (var(--buttonSpacing)*2));*/
+    right: var(--buttonSpacing);
+    top: var(--buttonSpacing);
+    position: fixed;
+    background-color: var(--button-color);
+    border-radius: var(--border-radius);
+    border-width: var(--border-width);
+    border-color: var(--border-color);
+    font-family: var(--page-font-family);
+    color: var(--text-color);
+}
+#themeButton:hover button {
+    background-color: var(--button-color-opposite-theme);
+    border-color: var(--border-color-opposite-theme);
+    color: var(--text-color-opposite-theme);
 }
 
 h1{
@@ -158,10 +287,6 @@ body {
 .pageContainer {
     width: 100vw
 }
-::-webkit-scrollbar {
-    position: fixed;
-    display: none;
-}
 
 .padding,
 div:not(.pageContainer):not(.link):not(.spacerHeader):not(.spacerFooter):not(.noPadding) {
@@ -262,6 +387,12 @@ div.profilePicAndName {
     border-color: var(--border-color);
     border-width: var(--border-width);
 }
+.subContainerStyle:has(div.link a:hover) {
+    background-color: var(--background-color-hover);
+}
+.subContainer:not(:has(div.link)) * {
+    pointer-events: none;
+}
 
 .link>center>a {
     white-space: nowrap;
@@ -353,6 +484,10 @@ div.header {
     box-sizing: border-box;
 }
 
+div.header, div.footer{
+    pointer-events: none;
+}
+
 div.header {
     border-bottom-width: 2px;
 }
@@ -371,6 +506,7 @@ a.madeBy {
 
 div.spacerHeader,
 div.spacerFooter {
+    pointer-events: none;
     width: 100vw;
     opacity: 0;
 }
