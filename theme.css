@@ -88,6 +88,7 @@ html.lightForce {
 }
 
 :root {
+    --link-columns-count: 4;
     --marginTopBottom: 0px;
     --marginLeftRight: var(--margin-column-spaceing);
     --font-size-a: var(--font-size-base);
@@ -100,6 +101,9 @@ html.lightForce {
     --font-size-h1: calc(var(--font-size-h2) + var(--font-size-increment));
     /**/
     /*var()*/
+}
+* {
+    font-family: var(--page-font-family);
 }
 html, body 
 { 
@@ -155,13 +159,15 @@ html, body
     border-radius: var(--border-radius);
     border-width: var(--border-width);
     border-color: var(--border-color);
-    font-family: var(--page-font-family);
     color: var(--text-color);
 }
 #themeButton:hover button {
     background-color: var(--button-color-opposite-theme);
     border-color: var(--border-color-opposite-theme);
     color: var(--text-color-opposite-theme);
+}
+h1,h2,h3,h4,h5,h6,a,p,div {
+    color: var(--text-color);
 }
 
 h1{
@@ -209,16 +215,18 @@ a{
         --scale: var(--scale-vertical);
         --marginTopBottom: var(--margin-column-spaceing);
         --marginLeftRight: 0px;
+        --link-columns-count: 1;
     }
     body {
         background-image: var(--background-image-vertical) !important;
+    }
+    .sectionFlexWrap{
+        --colum-count: 1 !important;
     }
 }
 
 .profilePicAndName {
     width: max-content;
-    background-color: blue;
-    color: var(--text-color);
     font-family: var(--page-font-family);
     border-color: var(--border-color);
     border-width: var(--border-width);
@@ -229,6 +237,9 @@ a{
     justify-content: center;
     padding-left: 0px;
 }
+.rowContainer{
+    margin-bottom: var(--margin-column-spaceing);
+}
 
 .profilePicAndName>center {
     background-color: transparent;
@@ -238,9 +249,7 @@ a{
     justify-content: center;
 }
 
-.profilePicAndName>center>.pfpText>h1 {
-    margin: center;
-    color: var(--text-color);
+.pfpText h1, .pfpText h2, .pfpText h3, .pfpText h4, .pfpText h5  {
     display: flex;
     width: max-content;
     flex-direction: row;
@@ -289,7 +298,7 @@ body {
 }
 
 .padding,
-div:not(.pageContainer):not(.link):not(.spacerHeader):not(.spacerFooter):not(.noPadding) {
+div:not(.noPadding) {
     padding: 10px;
 }
 
@@ -299,9 +308,7 @@ div:not(.pageContainer):not(.link):not(.spacerHeader):not(.spacerFooter) {
 }
 
 /*            div:not(.pageContainer):not(.link):not(.row):not(.footer):not(.header):not(.spacerHeader):not(.spacerFooter) */
-div.subContainerStyle,
-div.ContainerStyle,
-div.profilePicAndName {
+.BoxStyle {
     background-color: var(--background-color);
     border-color: var(--border-color);
     border-radius: var(--border-radius);
@@ -380,17 +387,17 @@ div.profilePicAndName {
     margin-right: var(--marginLeftRight);
 }
 
-.subContainerStyle {
+/*.subContainerStyle {
     background-color: var(--background-color);
     color: var(--text-color);
     font-family: var(--page-font-family);
     border-color: var(--border-color);
     border-width: var(--border-width);
-}
-.subContainerStyle:has(div.link a:hover) {
+}*/
+.subContainer.BoxStyle:has(div.link a:hover) {
     background-color: var(--background-color-hover);
 }
-.subContainer:not(:has(div.link)) * {
+.subContainer.BoxStyle:not(:has(div.link)) * {
     pointer-events: none;
 }
 
@@ -398,10 +405,15 @@ div.profilePicAndName {
     white-space: nowrap;
     margin: center;
     /*font-size: calc(20px * var(--scale));*/
-    color: var(--text-color);
     text-decoration: none;
     vertical-align: middle;
-    height: calc(20px * var(--scale));
+    height: calc(var(--linkNameSize) * var(--scale));
+}
+.link{
+    --linkNameSize: 30px;
+    --linkNameScale: 1;
+    --linkIconSecondScale: 1.25;
+    --linkIconSize: calc(var(--linkNameSize) * var(--linkIconSecondScale));
 }
 .linkName{
     display: flex;
@@ -410,49 +422,67 @@ div.profilePicAndName {
     justify-items: center;
     justify-content: center;
     white-space: nowrap;
-    margin: center;
-    /*font-size: calc(20px * var(--scale));*/
-    color: var(--text-color);
+    box-sizing: border-box;
+    font-size: calc(var(--linkNameSize) * var(--scale));
     text-decoration: none;
     vertical-align: middle;
-    height: calc(20px * var(--scale));
+    height: calc(var(--linkNameSize) * var(--scale));
 }
-.linkName>p{
+.linkName p, 
+.linkName h5, 
+.linkName h4, 
+.linkName h3, 
+.linkName h2, 
+.linkName h1{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: calc(var(--linkNameSize) * var(--scale));
     margin-left: calc(5px * var(--scale));
+    /*margin-right: calc(5px * var(--scale));*/
+}
+.linkName img.linkIcon {
+    vertical-align: middle;
+    /*padding-bottom: 5px;*/
+    margin-right: 10px;
+    transform: scale(var(--scale));
+    height: var(--linkIconSize);
+    width: var(--linkIconSize);
+}
+.linkName svg.linkArrow {
+    vertical-align: middle;
+    /*padding-bottom: 5px;*/
+    margin-left: 5px;
+    transform: scale(var(--scale));
+    height: var(--linkIconSize);
+}
+
+.linkName svg.linkArrow {
+    width: calc(var(--linkNameSize) * var(--scale));
+    height: calc(var(--linkNameSize) * var(--scale));
+    fill: var(--text-color);
+    transform: rotate(45deg);
 }
 .linkDescriptionContainer {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    white-space: break-spaces;
+    /*white-space: break-spaces;*/
+    white-space: pre-wrap;
     height: 100%;
 }
 .linkDescriptionTitle {
-    white-space: break-spaces;
+    white-space: pre-wrap;
     margin-top: 5px;
     margin-bottom: 5px;
 }
 .linkDescriptionText {
     margin-top: 5px;
     margin-bottom: 5px;
-    white-space: break-spaces;
+
+    white-space: pre-wrap;
 }
 
-svg.linkArrow,
-img.linkIcon,
-.link>center>a>img.linkIcon {
-    vertical-align: middle;
-    padding-bottom: 5px;
-    margin-left: 5px;
-    transform: scale(var(--scale));
-}
 
-svg.linkArrow {
-    width: calc(24px * var(--scale));
-    height: calc(24px * var(--scale));
-    fill: var(--text-color);
-    transform: rotate(45deg);
-}
 
 footer {
     --size: var(--footer-size);
@@ -529,28 +559,33 @@ div.spacerFooter {
     top: 0px;
 }
 
-.section>h5 {
+/*.section>h5 {
     font-family: var(--page-font-family);
     color: var(--text-color);
     padding-left: 15px;
-    /*font-size: calc(30px * var(--scale));*/
+    font-size: calc(30px * var(--scale));
     text-align: start;
-}
+}*/
 
-.section>h5 {
+.section h1,
+.section h2,
+.section h3,
+.section h4,
+.section h5, 
+.section h6 {
     font-family: var(--page-font-family);
     color: var(--text-color);
     padding-left: 15px;
-    /*font-size: calc(25px * var(--scale));*/
+    padding-right: 15px;
     text-align: center;
     margin: 5px 0px;
 }
 
-.section>ul>li {
+.section li {
     font-size: calc(20px * var(--scale));
 }
 
-.section>ul>li>p {
+.section p {
     padding-left: 15px;
     padding-right: 15px;
     /*font-size: calc(20px * var(--scale));*/
@@ -570,7 +605,7 @@ div.aboutMe {
     width: -webkit-fill-available;
 }
 
-.aboutMe>center>div {
+.aboutMe div {
     margin-left: var(--marginLeftRight);
     width: calc(100% - var(--marginLeftRight));
 }
@@ -583,4 +618,55 @@ div.aboutMe {
 .fillAvailableSpace {
     width: -webkit-fill-available !important;
     width: -moz-available !important;
+}
+#discordLogo {
+    border-radius: 50%;
+    background-color: #5865f2;
+    padding-bottom: 0px !important;
+    margin-right: 5px;
+}
+.sectionFlexWrap{
+    /*--colum-count: 3;*/
+    --FlexSub-marginSize: calc(var(--margin-column-spaceing) / 2);
+}
+.sectionFlexWrap>div,
+.infoSubcontainer {
+    --InfoTitleMargin: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    box-sizing: border-box;
+    text-decoration: none;
+    vertical-align: middle;
+    box-sizing: border-box;
+    height: auto;
+    width: calc((100% / var(--colum-count)) - var(--margin-column-spaceing));
+}
+.sectionFlexWrap>div,
+.infoSubcontainer 
+{
+    margin: var(--FlexSub-marginSize)
+}
+.infoSubcontainer p, 
+.infoSubcontainer h6, 
+.infoSubcontainer h5, 
+.infoSubcontainer h4, 
+.infoSubcontainer h3, 
+.infoSubcontainer h2, 
+.infoSubcontainer h1{
+    margin-top: var(--InfoTitleMargin);
+    margin-bottom: var(--InfoTitleMargin);
+    /*font-size: calc(var(--linkNameSize) * var(--scale));*/
+    margin-left: 0px;
+    margin-right: 0px;
+    padding: 0px;
+}
+.sectionFlexWrap{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
