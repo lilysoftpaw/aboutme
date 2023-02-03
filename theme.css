@@ -141,15 +141,21 @@ html, body
 ::-webkit-scrollbar-track-piece:end {
     background: transparent url('./images/backgrounds/scrollbar.png') repeat-y !important;
 }*/
-#themeButton, #themeButton button{
-    height: var(--header-size);
+.themeButton#horizontalThemeButton, .themeButton#horizontalThemeButton button {
     width: calc(var(--header-size)*3);
+}
+.themeButton#verticalThemeButton, .themeButton#verticalThemeButton button {
+    
+    width: calc(var(--header-size));
+}
+.themeButton, .themeButton button{
+    height: var(--header-size);
     right: 0px;
     top: 0px;
     position: fixed;
     pointer-events: auto;
 }
-#themeButton button {
+.themeButton button {
     height: calc(var(--header-size) - (var(--buttonSpacing)*2));
     /*width: calc(var(--header-size) - (var(--buttonSpacing)*2));*/
     right: var(--buttonSpacing);
@@ -161,7 +167,7 @@ html, body
     border-color: var(--border-color);
     color: var(--text-color);
 }
-#themeButton:hover button {
+.themeButton:hover button {
     background-color: var(--button-color-opposite-theme);
     border-color: var(--border-color-opposite-theme);
     color: var(--text-color-opposite-theme);
@@ -198,7 +204,14 @@ a{
     size: calc(var(--font-size-a) * var(--scale));
     font-size: calc(var(--font-size-a) * var(--scale));
 }
-
+#verticalThemeButton {
+    opacity: 0;
+    pointer-events: none;
+}
+#horizontalThemeButton {
+    opacity: 1;
+    pointer-events: all;
+}
 @media screen and (orientation: portrait) {
 
     /*Vertical Detection. Is also used for when on a phone.*/
@@ -206,7 +219,7 @@ a{
         flex-direction: column;
     }
     .profilePicAndName {
-        width: calc(100% - 10px) !important;
+        width: calc(100%) !important;
     }
     .rowFloatLeft {
         flex-direction: column;
@@ -223,7 +236,29 @@ a{
     .sectionFlexWrap{
         --colum-count: 1 !important;
     }
+    #verticalThemeButton {
+        opacity: 1;
+        pointer-events: all;
+    }
+    #horizontalThemeButton {
+        opacity: 0;
+        pointer-events: none;
+    }
+    :root{
+        --header-size: 75px;
+        --footer-size: 75px;
+        --buttonSpacing: 5px;
+        --button-height: calc(var(--header-size) - (var(--buttonSpacing)*2)); 
+    }
+    .themeButton#verticalThemeButton, .themeButton#verticalThemeButton button {
+        width: var(--button-height);
+        height: var(--button-height);
+    }
+    header>div>center{
+        width: calc(100% - var(--button-height));
+    }
 }
+
 
 .profilePicAndName {
     width: max-content;
@@ -247,6 +282,54 @@ a{
     display: flex;
     flex-direction: row;
     justify-content: center;
+}
+@media only screen and (orientation: landscape) and (max-width: 800px){
+    .profilePicAndName {
+        width: -webkit-fill-available !important;
+        width: -moz-available !important;
+    }
+    .profilePicAndName>center {
+        flex-direction: column;
+    }
+    .aboutMe>center>div,   
+    .aboutMe {
+        margin-left: 0px;
+        padding-left: 0px;
+    }
+    #pfpNameAndAboutMe {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .sectionFlexWrap {
+        --colum-count: 2 !important;
+    }
+    :root {
+        --marginTopBottom: var(--margin-column-spaceing);
+        --link-columns-count: 2;
+        --scale: .6;
+    }
+    #verticalThemeButton {
+        opacity: 1;
+        pointer-events: all;
+    }
+    #horizontalThemeButton {
+        opacity: 0;
+        pointer-events: none;
+    }
+    :root{
+        --header-size: 60px;
+        --footer-size: 60px;
+        --buttonSpacing: 5px;
+        --button-height: calc(var(--header-size) - (var(--buttonSpacing)*2)); 
+    }
+    .themeButton#verticalThemeButton, .themeButton#verticalThemeButton button {
+        width: var(--button-height);
+        height: var(--button-height);
+    }
+    header>div>center{
+        width: calc(100% - var(--button-height));
+    }
 }
 
 .pfpText h1, .pfpText h2, .pfpText h3, .pfpText h4, .pfpText h5  {
