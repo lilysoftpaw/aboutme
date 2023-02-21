@@ -141,37 +141,91 @@ html, body
 ::-webkit-scrollbar-track-piece:end {
     background: transparent url('./images/backgrounds/scrollbar.png') repeat-y !important;
 }*/
+.buttonStyle{
+    height: var(--header-size);
+    --buttonHeightParent: var(--header-size);
+    --buttonSpacingParent: var(--buttonSpacing);
+    color: var(--text-color);
+    pointer-events: auto;
+    /*left: var(--buttonSpacingParent);
+    top: var(--buttonSpacingParent);*/
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.buttonStyle button{
+    background-color: var(--button-color);
+    border-radius: var(--border-radius);
+    border-width: var(--border-width);
+    border-color: var(--border-color);
+    color: inherit;
+    height: calc(var(--buttonHeightParent) - (var(--buttonSpacingParent)*2));
+    pointer-events: inherit;
+    
+}
+.buttonStyle button[horizontal] {
+    width: max-content;
+    width: calc(var(--buttonHeightParent)*3);
+}
+.buttonStyle button[vertical] {
+    width: calc(var(--buttonHeightParent));
+}
+.buttonStyle button:hover
+{
+    color: var(--text-color-opposite-theme);
+    background-color: var(--button-color-opposite-theme);
+    border-color: var(--border-color-opposite-theme);
+}
+.GoBackButton{
+    position: fixed;
+    top: 0px;
+    left: var(--buttonSpacingParent);
+}
+.ThemeButton {
+    position: fixed;
+    top: 0px;
+    right: var(--buttonSpacingParent);
+}
+/*
 .themeButton#horizontalThemeButton, .themeButton#horizontalThemeButton button {
     width: calc(var(--header-size)*3);
 }
 .themeButton#verticalThemeButton, .themeButton#verticalThemeButton button {
-    
     width: calc(var(--header-size));
 }
 .themeButton, .themeButton button{
-    height: var(--header-size);
     right: 0px;
     top: 0px;
     position: fixed;
-    pointer-events: auto;
 }
 .themeButton button {
-    height: calc(var(--header-size) - (var(--buttonSpacing)*2));
-    /*width: calc(var(--header-size) - (var(--buttonSpacing)*2));*/
-    right: var(--buttonSpacing);
-    top: var(--buttonSpacing);
+    
+    
     position: fixed;
+}
+.headerButton:hover,
+.themeButton:hover button {
+    background-color: var(--button-color-opposite-theme);
+    border-color: var(--border-color-opposite-theme);
+    color: var(--text-color-opposite-theme);
+}*/
+
+/*
+.headerButton {
+    pointer-events: auto;
+    height: calc(var(--header-size) - (var(--buttonSpacing)*2));
     background-color: var(--button-color);
     border-radius: var(--border-radius);
     border-width: var(--border-width);
     border-color: var(--border-color);
     color: var(--text-color);
 }
-.themeButton:hover button {
-    background-color: var(--button-color-opposite-theme);
-    border-color: var(--border-color-opposite-theme);
-    color: var(--text-color-opposite-theme);
-}
+.headerButton a {
+    color: inherit;
+}*/
 h1,h2,h3,h4,h5,h6,a,p,div {
     color: var(--text-color);
 }
@@ -204,13 +258,17 @@ a{
     size: calc(var(--font-size-a) * var(--scale));
     font-size: calc(var(--font-size-a) * var(--scale));
 }
-#verticalThemeButton {
+*[vertical] {
     opacity: 0;
     pointer-events: none;
 }
-#horizontalThemeButton {
+*[horizontal] {
     opacity: 1;
     pointer-events: all;
+}
+.sectionTitle {
+    margin-top: .25em;
+    margin-bottom: .25em;
 }
 @media screen and (orientation: portrait) {
 
@@ -229,6 +287,7 @@ a{
         --marginTopBottom: var(--margin-column-spaceing);
         --marginLeftRight: 0px;
         --link-columns-count: 1;
+        --projects-columns-count: 1;
     }
     body {
         background-image: var(--background-image-vertical) !important;
@@ -236,11 +295,11 @@ a{
     .sectionFlexWrap{
         --colum-count: 1 !important;
     }
-    #verticalThemeButton {
+    *[vertical]  {
         opacity: 1;
         pointer-events: all;
     }
-    #horizontalThemeButton {
+    *[horizontal] {
         opacity: 0;
         pointer-events: none;
     }
@@ -250,10 +309,11 @@ a{
         --buttonSpacing: 5px;
         --button-height: calc(var(--header-size) - (var(--buttonSpacing)*2)); 
     }
+    /*
     .themeButton#verticalThemeButton, .themeButton#verticalThemeButton button {
         width: var(--button-height);
         height: var(--button-height);
-    }
+    }*/
     header>div>center{
         width: calc(100% - var(--button-height));
     }
@@ -323,7 +383,7 @@ a{
         --buttonSpacing: 5px;
         --button-height: calc(var(--header-size) - (var(--buttonSpacing)*2)); 
     }
-    .themeButton#verticalThemeButton, .themeButton#verticalThemeButton button {
+    .buttonStyle[vertical] button {
         width: var(--button-height);
         height: var(--button-height);
     }
