@@ -1,2 +1,2 @@
-# aboutme
-An about me page that you can just clone and edit. I spent (When the commit updating the about me was done) roughly 6-7 hours making this
+# About me page
+An about me page that you can just fork and edit. I spent (When the commit updating the about me was done) over 12 hours making this probably...
