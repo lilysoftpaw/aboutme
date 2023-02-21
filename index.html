@@ -27,12 +27,12 @@
         <header>
             <div class="header">
                 <center><div class="pageHeader">Ahirusameneko-Chan's Pronouns / Bio (This page is a WIP)</div></center>
-                <div id="horizontalThemeButton" class="themeButton"><button type="button" onclick="SwitchThemes();">Change Theme</button></div>
-                <div id="verticalThemeButton" class="themeButton"><button type="button" onclick="SwitchThemes();">C.T.</button></div>
+                <div horizontal class="ThemeButton buttonStyle noPadding"><button class="buttonStyle" type="button" onclick="SwitchThemes();">Change Theme</button></div>
+                <div vertical class="ThemeButton buttonStyle noPadding"><button class="buttonStyle" type="button" onclick="SwitchThemes();">C.T.</button></div>
             </div>
         </header>
         <div class="spacerHeader noPadding"></div>
-        <div class="pageContainer noPadding">
+        <main class="pageContainer noPadding">
             <center>
                 <div class="container column">
                     <div id="pfpNameAndAboutMe" class="container rowFloatLeft noPadding">
@@ -64,6 +64,9 @@
                         </div>
                     </div>
                     <div id="links" class="BoxStyle rowContainer">
+                        <div class="container row">
+                            <h3 class="sectionTitle">Social Links</h3>
+                        </div>
                         <div class="container row">
                             <div class="sectionFlexWrap" style="--colum-count: var(--link-columns-count) !important">
                                 <div class="subContainer BoxStyle">
@@ -185,6 +188,23 @@
                                         </center>
                                     </div>
                                 </div>
+                                <div class="subContainer BoxStyle">
+                                    <div class="link noPadding">
+                                        <center>
+                                            <a href="./projects/">
+                                                <div class="linkName">
+                                                    <img src="./logos/github.svg" class="linkIcon" alt="Site Logo" height="24" width="29" />
+                                                    <p>My projects</p>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="linkArrow" role="img" width="24" height="24" viewBox="0 0 24 24"><polygon fill="currentColor" fill-rule="nonzero" points="13 20 11 20 11 8 5.5 13.5 4.08 12.08 12 4.16 19.92 12.08 18.5 13.5 13 8"></polygon></svg>
+                                                </div>
+                                                <div class="linkDescriptionContainer">
+                                                    <h6 class="linkDescriptionTitle">Projects Page</h6>
+                                                    <p class="linkDescriptionText">A list of my projects that I have done and published to github.</p>
+                                                </div>
+                                            </a>
+                                        </center>
+                                    </div>
+                                </div>
                                 <!--<div class="subContainer BoxStyle">
                                     <div class="link noPadding">
                                         <center>
@@ -241,7 +261,7 @@
                                 </div>
                                 <div class="infoSubcontainer BoxStyle">
                                     <h5 class="sectionTitle">Relation status</h5>
-                                    <p>Not taken...</p>
+                                    <p>Aromantic</p>
                                     <!--<p>Taken!</p>
                                     <p style="font-size: calc((var(--font-size-p) - 7px) * var(--scale))">I love you Evelyn &lt;3 </p>
                                     --->
@@ -290,15 +310,19 @@
                         <div class="container row">
                             <div class="subContainer">
                                 <div class="section noPadding">
-                                    <h4 class="sectionTitle">What does "Closeted" Trans mean?</h4>
+                                    <h3 class="sectionTitle">What does "Closeted" Trans mean?</h3>
                                     <p>It's the same thing as closet weeb. It simply means that I will not show that I am trans in public (Or outside of my room / closet) because I am really shy about what others think about me even tho it looks like I don't care. Outside my room / closet (this excludes the internet), I will appear as my birth gender with my birth name and everything that goes along with it. I'm also worried about what my parents might think about this, and this is an other reason for I'm closeted.<br /></p>
+                                    <h5 class="sectionTitle">How to refer to me IRL? (If you know me IRL)</h5>
+                                    <p>If you know me IRL, since I'm closeted, refer to me as a He/Him and use my Dead name unless I tell to do otherwise.</p>
+                                    <br />
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </center>
-        </div>
+        </main>
+
         <div class="spacerFooter noPadding"></div>
         <footer>
             <div class="footer">
