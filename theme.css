@@ -89,6 +89,7 @@ html.lightForce {
 
 :root {
     --link-columns-count: 4;
+    --projects-columns-count: 2;
     --marginTopBottom: 0px;
     --marginLeftRight: var(--margin-column-spaceing);
     --font-size-a: var(--font-size-base);
