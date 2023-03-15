@@ -818,12 +818,9 @@ div.aboutMe {
     flex-direction: row;
     justify-content: space-evenly;
 }
-<<<<<<< Updated upstream:css/theme.css
-=======
 
 .aboutMe > center,
 .aboutMe > center > div
  {
     height: 100%;
 }
->>>>>>> Stashed changes:theme.css

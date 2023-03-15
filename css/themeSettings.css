@@ -1,7 +1,9 @@
 :root {
     --dark-background-color-page: black;
-    --dark-background-image-horizontal: url("./images/backgrounds/page/horizontal.png");
-    --dark-background-image-vertical: url("./images/backgrounds/page/vertical.png");
+    /*--dark-background-image-horizontal: url("../images/backgrounds/page/horizontal.png");*/
+    --dark-background-image-horizontal:  linear-gradient(to bottom right, #0088ff, #ff00f7);
+    --dark-background-image-vertical:  linear-gradient(to bottom right, #0088ff, #ff00f7);
+    /*--dark-background-image-vertical: url("../images/backgrounds/page/vertical.png");*/
     --dark-background-color: #0c0026aa;
     --dark-background-color-hover: #210069aa;
     --dark-button-color: #0c0026;
@@ -10,9 +12,11 @@
     --dark-text-color: white;
 
     --light-background-color-page: white;
-    --light-background-image-horizontal: url("./images/backgrounds/page/horizontal.png");
-    --light-background-image-vertical: url("./images/backgrounds/page/vertical.png");
-    --light-background-color: #f0f0f0bc;
+    /*--light-background-image-horizontal: url("../images/backgrounds/page/horizontal.png");
+    --light-background-image-vertical: url("../images/backgrounds/page/vertical.png");*/
+    --light-background-image-horizontal:  linear-gradient(to bottom right, #0088ff, #ff00f7);
+    --light-background-image-vertical:  linear-gradient(to bottom right, #0088ff, #ff00f7);
+    --light-background-color: #f0f0f054;
     --light-background-color-hover: #a7a7a7bc;
     --light-button-color: #f0f0f0;
     --light-button-color-hover: #a7a7a7;
