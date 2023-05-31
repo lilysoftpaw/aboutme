@@ -131,6 +131,16 @@ html, body
     background-color: var(--border-color);
     min-height: 40px;
 }
+.copyrightsContainer,
+.linksContainer {
+	--colum-count: 4;
+}
+@media screen and (max-width: 950px)  {
+	.copyrightsContainer,
+	.linksContainer {
+		--colum-count: 3 !important;
+	}
+}
 /*
 ::-webkit-scrollbar-track-piece:start {
     background: transparent url('./images/backgrounds/scrollbar.png') repeat-y !important;
@@ -167,6 +177,10 @@ html, body
     pointer-events: inherit;
     
 }
+.footer a {
+	pointer-events: all;
+}
+
 .buttonStyle button[horizontal] {
     width: max-content;
     width: calc(var(--buttonHeightParent)*3);
@@ -283,13 +297,16 @@ a{
     .rowFloatLeft {
         flex-direction: column;
     }
-    :root {
+    /*:root {
         --scale: var(--scale-vertical);
         --marginTopBottom: var(--margin-column-spaceing);
         --marginLeftRight: 0px;
         --link-columns-count: 1;
         --projects-columns-count: 1;
-    }
+    }*/
+	:root {
+		--marginLeftRight: 0px;
+	}
     body {
         background-image: var(--background-image-vertical) !important;
     }
@@ -563,6 +580,7 @@ div.profilePicAndName {
     --linkIconSecondScale: 1.25;
     --linkIconSize: calc(var(--linkNameSize) * var(--linkIconSecondScale));
 }
+.copyrightName > .siteName,
 .linkName{
     display: flex;
     flex-direction: row;
@@ -576,6 +594,12 @@ div.profilePicAndName {
     vertical-align: middle;
     height: calc(var(--linkNameSize) * var(--scale));
 }
+.copyrightName > .siteName p,
+.copyrightName > .siteName h1,
+.copyrightName > .siteName h2,
+.copyrightName > .siteName h3,
+.copyrightName > .siteName h4,
+.copyrightName > .siteName h5,
 .linkName p, 
 .linkName h5, 
 .linkName h4, 
@@ -588,6 +612,7 @@ div.profilePicAndName {
     margin-left: calc(5px * var(--scale));
     /*margin-right: calc(5px * var(--scale));*/
 }
+.iconTaken img.linkIcon,
 .linkName img.linkIcon {
     vertical-align: middle;
     /*padding-bottom: 5px;*/
@@ -596,6 +621,7 @@ div.profilePicAndName {
     height: var(--linkIconSize);
     width: var(--linkIconSize);
 }
+.copyrightName .siteName svg.linkArrow,
 .linkName svg.linkArrow {
     vertical-align: middle;
     /*padding-bottom: 5px;*/
@@ -603,7 +629,13 @@ div.profilePicAndName {
     transform: scale(var(--scale));
     height: var(--linkIconSize);
 }
-
+.copyrightName h6 {
+	white-space: pre-wrap;
+	margin-top: 5px;
+    margin-bottom: 5px;
+}
+.copyrightName .siteName svg.linkArrow,
+.linkDescription svg.linkArrow,
 .linkName svg.linkArrow {
     width: calc(var(--linkNameSize) * var(--scale));
     height: calc(var(--linkNameSize) * var(--scale));
@@ -823,4 +855,10 @@ div.aboutMe {
 .aboutMe > center > div
  {
     height: 100%;
+}
+.copyrightsTitle {
+	width: 100%;
+}
+.copyrightsTitleContainer {
+	flex-direction: column;
 }
