@@ -956,3 +956,24 @@ div#LikesDislikesHobbies > .container > .section {
 #LikesDislikesHobbies {
 	--max-columns: 3;
 }
+body {
+	z-index: 0;
+}
+.rowContainer {
+	z-index: 1;
+}
+.container{
+	z-index: 2;
+}
+.sectionFlexWrap,
+.section {
+	z-index: 3;
+}
+.subContainer *,
+.subContainer {
+	z-index: 4 !important;
+}
+footer,
+header {
+ z-index: 100;
+}
