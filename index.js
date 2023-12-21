@@ -32,7 +32,13 @@ const assetsUrl = "./static/"
 		desc: "A cute page for all of my projects",
 	}
 ]*/
-
+function createData(cardType, data){
+	let returnData = "";
+	data.forEach((item) => {
+		returnData += `${cardType == 2 ? "<li>" : ""}<p>${item}</p>${cardType == 2 ? "</li>" : ""}`;
+	})
+	return returnData
+}
 
 app.get("/", async (request, resolve) => {
 	//console.log("nya1")
@@ -45,7 +51,7 @@ app.get("/", async (request, resolve) => {
 	discordEmbedTemplate = replaceAll(discordEmbedTemplate, "{color}", embedColor);
 	//console.log(pageTemplateDom.window.document.querySelector("head").querySelector(`meta[name="DiscordEmbed"]`))//.querySelectorAll(`div`).length)
 	pageTemplateDom.window.document.querySelector("head").innerHTML += discordEmbedTemplate;
-	let cardLinksData = JSON.parse(fs.readFileSync(path.join(__dirname, "data.json")).toString());
+	let cardLinksData = JSON.parse(fs.readFileSync(path.join(__dirname, "data.json")).toString()).links;
 	cardLinksData.forEach(card => {
 		let linkCard = fs.readFileSync(path.join(__dirname, "templates/linkCard.html")).toString();
 	linkCard = replaceAll(linkCard, "{reference}", card.reference);
@@ -54,6 +60,22 @@ app.get("/", async (request, resolve) => {
 	linkCard = replaceAll(linkCard, "{descTitle}", card.descTitle);
 	linkCard = replaceAll(linkCard, "{desc}", card.desc);
 	pageTemplateDom.window.document.querySelector("div#links>div#linksContainerRow>div.linksContainer").innerHTML += linkCard;
+	
+	})
+	let cardInfoData1 = JSON.parse(fs.readFileSync(path.join(__dirname, "data.json")).toString()).info1;
+	cardInfoData1.forEach(card => {
+		let infoCard = fs.readFileSync(path.join(__dirname, "templates/infoCard1.html")).toString();
+	infoCard = replaceAll(infoCard, "{title}", card.title);
+	infoCard = replaceAll(infoCard, "{data}", createData(1,card.data));
+	pageTemplateDom.window.document.querySelector("#basicInfo>div>div.infoContainerParent").innerHTML += infoCard;
+	
+	})
+	let cardInfoData2 = JSON.parse(fs.readFileSync(path.join(__dirname, "data.json")).toString()).info2;
+	cardInfoData2.forEach(card => {
+		let infoCard = fs.readFileSync(path.join(__dirname, "templates/infoCard2.html")).toString();
+	infoCard = replaceAll(infoCard, "{title}", card.title);
+	infoCard = replaceAll(infoCard, "{data}", createData(2,card.data));
+	pageTemplateDom.window.document.querySelector("#LikesDislikesHobbies>div>div.sectionFlexWrap").innerHTML += infoCard;
 	
 	})
 		//const ParsedHTMLData = domparser.parseFromString(HtmlData);
