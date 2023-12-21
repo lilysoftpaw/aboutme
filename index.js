@@ -46,15 +46,16 @@ app.get("/", async (request, resolve) => {
 	let twitterEmbedCard = await fs.readFileSync(path.join(__dirname, "templates/TwitterCard.html")).toString()
 	twitterEmbedCard.replace("{username}", "@lilysoftpaw")
 	let pageTemplate = await fs.readFileSync(path.join(__dirname, "templates/pageTemplate.html")).toString()
-	const pageTemplateDom = domparser.parseFromString(pageTemplate);
+	
 	discordEmbedTemplate = replaceAll(discordEmbedTemplate, "{domain}", domain);
 	discordEmbedTemplate = replaceAll(discordEmbedTemplate, "{title}", embedTitle);
 	discordEmbedTemplate = replaceAll(discordEmbedTemplate, "{description}", embedDescription);
 	discordEmbedTemplate = replaceAll(discordEmbedTemplate, "{color}", embedColor);
 	//console.log(pageTemplateDom.window.document.querySelector("head").querySelector(`meta[name="DiscordEmbed"]`))//.querySelectorAll(`div`).length)
-	pageTemplateDom.window.document.querySelector("head").innerHTML += discordEmbedTemplate;
-	pageTemplateDom.window.document.querySelector("head").innerHTML += twitterEmbedCard;
+	pageTemplate = pageTemplate.replace("{discordEmbed}", discordEmbedTemplate);
+	pageTemplate = pageTemplate.replace("{twitterEmbed}",twitterEmbedCard);
 	let cardLinksData = JSON.parse(fs.readFileSync(path.join(__dirname, "data.json")).toString()).links;
+	let cards = ""
 	cardLinksData.forEach(card => {
 		let linkCard = fs.readFileSync(path.join(__dirname, "templates/linkCard.html")).toString();
 	linkCard = replaceAll(linkCard, "{reference}", card.reference);
@@ -62,32 +63,37 @@ app.get("/", async (request, resolve) => {
 	linkCard = replaceAll(linkCard, "{title}", card.title);
 	linkCard = replaceAll(linkCard, "{descTitle}", card.descTitle);
 	linkCard = replaceAll(linkCard, "{desc}", card.desc);
-	pageTemplateDom.window.document.querySelector("div#links>div#linksContainerRow>div.linksContainer").innerHTML += linkCard;
+	cards += linkCard;
 	
 	})
+	pageTemplate = pageTemplate.replace("{linkCards}", cards)
 	let cardInfoData1 = JSON.parse(fs.readFileSync(path.join(__dirname, "data.json")).toString()).info1;
+	let cards2 = "";
 	cardInfoData1.forEach(card => {
 		let infoCard = fs.readFileSync(path.join(__dirname, "templates/infoCard1.html")).toString();
 	infoCard = replaceAll(infoCard, "{title}", card.title);
 	infoCard = replaceAll(infoCard, "{data}", createData(1,card.data));
-	pageTemplateDom.window.document.querySelector("#basicInfo>div>div.infoContainerParent").innerHTML += infoCard;
+	cards2 += infoCard;
 	
 	})
+	pageTemplate = pageTemplate.replace("{infoCards1}", cards2)
 	let cardInfoData2 = JSON.parse(fs.readFileSync(path.join(__dirname, "data.json")).toString()).info2;
+	let cards3 = "";
 	cardInfoData2.forEach(card => {
 		let infoCard = fs.readFileSync(path.join(__dirname, "templates/infoCard2.html")).toString();
 	infoCard = replaceAll(infoCard, "{title}", card.title);
 	infoCard = replaceAll(infoCard, "{data}", createData(2,card.data));
-	pageTemplateDom.window.document.querySelector("#LikesDislikesHobbies>div>div.sectionFlexWrap").innerHTML += infoCard;
+	cards3 += infoCard;
 	
 	})
+	pageTemplate = pageTemplate.replace("{infoCards2}", cards3)
 		//const ParsedHTMLData = domparser.parseFromString(HtmlData);
 		//let BaseScript = fs.readFileSync(path.join(global.appPath,"/wwwroot/scripts/subscribeScriptbase.js")).toString();
 		//const SubscritionScript = BaseScript.replace("<url>","http://localhost:8081/endpoints/obs-overlay/subscribe");
 		//ParsedHTMLData.window.document.querySelector("#subscribeScript").innerHTML = SubscritionScript;
 		resolve.set('Content-Type', 'text/html');
 		//console.log(ParsedHTMLData.serialize());
-		resolve.send(pageTemplateDom.serialize());
+		resolve.send(pageTemplate);
 		
 
 });
@@ -128,6 +134,6 @@ app.use("/static/", express.static(path.join(__dirname, "staticFiles")));
 
 module.exports = app;
 
-//app.listen(3000, ()=>{
-//	console.log("port 3000");
-//})
+app.listen(3000, ()=>{
+	console.log("port 3000");
+})
