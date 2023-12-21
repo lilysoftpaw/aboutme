@@ -43,6 +43,8 @@ function createData(cardType, data){
 app.get("/", async (request, resolve) => {
 	//console.log("nya1")
 	let discordEmbedTemplate = await fs.readFileSync(path.join(__dirname, "templates/discordEmbed.html")).toString()
+	let twitterEmbedCard = await fs.readFileSync(path.join(__dirname, "templates/TwitterCard.html")).toString()
+	twitterEmbedCard.replace("{username}", "@lilysoftpaw")
 	let pageTemplate = await fs.readFileSync(path.join(__dirname, "templates/pageTemplate.html")).toString()
 	const pageTemplateDom = domparser.parseFromString(pageTemplate);
 	discordEmbedTemplate = replaceAll(discordEmbedTemplate, "{domain}", domain);
@@ -51,6 +53,7 @@ app.get("/", async (request, resolve) => {
 	discordEmbedTemplate = replaceAll(discordEmbedTemplate, "{color}", embedColor);
 	//console.log(pageTemplateDom.window.document.querySelector("head").querySelector(`meta[name="DiscordEmbed"]`))//.querySelectorAll(`div`).length)
 	pageTemplateDom.window.document.querySelector("head").innerHTML += discordEmbedTemplate;
+	pageTemplateDom.window.document.querySelector("head").innerHTML += twitterEmbedCard;
 	let cardLinksData = JSON.parse(fs.readFileSync(path.join(__dirname, "data.json")).toString()).links;
 	cardLinksData.forEach(card => {
 		let linkCard = fs.readFileSync(path.join(__dirname, "templates/linkCard.html")).toString();
