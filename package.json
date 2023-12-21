@@ -9,6 +9,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "decimal": "^0.0.2",
+    "decimal.js": "^10.4.3",
     "express": "^4.18.2",
     "jsdom": "^23.0.1"
   }
