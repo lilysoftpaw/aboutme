@@ -2,7 +2,7 @@ const express = require("express");
 const path = require("path");
 const fs = require("fs");
 const app = express();
-const jsdom = require("jsdom");
+/*const jsdom = require("jsdom");
 const { JSDOM } = jsdom;
 
 class DOMParser {
@@ -10,7 +10,7 @@ class DOMParser {
 	  return new JSDOM(s, {contentType});
 	}
   }
-  const domparser = new DOMParser();
+  const domparser = new DOMParser();*/
 /*app.get("/", (req, res) => {
 	
 	res.send("html data here")
