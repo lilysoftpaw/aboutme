@@ -128,6 +128,6 @@ app.use("/static/", express.static(path.join(__dirname, "staticFiles")));
 
 module.exports = app;
 
-app.listen(3000, ()=>{
-	console.log("port 3000");
-})
+//app.listen(3000, ()=>{
+//	console.log("port 3000");
+//})
