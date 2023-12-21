@@ -1,16 +1,61 @@
 [
 	{
 		"reference": "https://osu.ppy.sh/users/28212610",
-		"logo": "assets/logos/osu.svg",
+		"logo": "assets/logos/osu.svg","extras":[],
 		"title": "Bido67",
 		"descTitle": "My Osu! Profile",
 		"desc": "I've been playing osu! since March 2023 (Addicted)"
 	},
 	{
 		"reference": "https://bsky.app/profile/lilysoftpaw.bsky.social",
-		"logo": "assets/user_picture.png",
+		"logo": "assets/user_picture.png","extras":[],
 		"title": "Lilysoftpaw",
 		"descTitle": "Bluesky",
 		"desc": "Bluesky > Twitter"
+	},
+	{
+		"reference": "https://twitch.tv/lilysoftpaw",
+		"logo": "assets/logos/twitch.svg","extras":[],
+		"title": "Lilysoftpaw",
+		"descTitle": "Twitch Affiliate",
+		"desc": "I've been affiliated on Twitch since May 2021"
+	},
+	{
+		"reference": "https://twitter.com/lilysoftpaw",
+		"logo": "assets/logos/twitter.svg","extras":[],
+		"title": "Lilysoftpaw",
+		"descTitle": "My Twitter",
+		"desc": "I post random shit here"
+	},
+	{
+		"reference": "https://youtube.com/@lilysoftpaw",
+		"logo": "assets/logos/youtube.svg","extras":[],
+		"title": "Lilysoftpaw",
+		"descTitle": "My channel",
+		"desc": "I don't really post things on youtube but hey you can sub if you want :3"
+	},
+	{
+		"reference": "https://github.com/lilysoftpaw",
+		"logo": "assets/logos/github.svg",
+		"extras":[],
+		"title": "Lilysoftpaw",
+		"descTitle": "My github :3",
+		"desc": "The repo to this page is in there :3"
+		
+	},
+	{
+		"reference": "https://discord.gg/bnSrkHT",
+		"logo": "assets/discord_server_icons/ducklands.png",
+		"extras":["discordExtras"],
+		"title": "Ducklands",
+		"descTitle": "My discord server!",
+		"desc": "Its kinda blown up... But you can still join. It holds  acertain value to me..."
+	},{
+		"reference": "./static/projects/",
+		"logo": "assets/logos/github.svg",
+		"extras":[],
+		"title": "Projects",
+		"descTitle": "Projects Page",
+		"desc": "A list of my projects that I have done and published to github."
 	}
 ]
