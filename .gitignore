@@ -1,2 +1,4 @@
-images/*
+staticFiles/images/*
 .vscode/*
+node_modules/*
+
