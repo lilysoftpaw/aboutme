@@ -118,10 +118,14 @@ html, body
 .linksContainer {
 	--colum-count: 4;
 }
+.linksContainer{
+    --artist-colum-count: calc(var(--colum-count) - 1);
+}
 @media screen and (max-width: 950px)  {
 	.copyrightsContainer,
 	.linksContainer {
 		--colum-count: 3 !important;
+        
 	}
 }
 .buttonStyle{
@@ -348,6 +352,9 @@ a{
         --link-columns-count: 1;
         --projects-columns-count: 1;
     }*/
+    .artistLinksPadding{
+        padding-left: 0px !important;
+    }
 	:root {
 		--marginLeftRight: 0px;
 	}
@@ -407,6 +414,9 @@ a{
     flex-direction: row;
     justify-content: center;
 }
+.artist>.profilePicAndName>center {
+    flex-direction: column;
+}
 @media only screen and (orientation: landscape) and (max-width: 800px){
     .profilePicAndName {
         width: -webkit-fill-available !important;
@@ -415,11 +425,15 @@ a{
     .profilePicAndName>center {
         flex-direction: column;
     }
+    .artistLinksPadding{
+        padding-left: 0px !important;
+    }
     .aboutMe>center>div,   
     .aboutMe {
         margin-left: 0px;
         padding-left: 0px;
     }
+    .artists,
     #pfpNameAndAboutMe {
         display: flex;
         flex-direction: column;
@@ -539,6 +553,7 @@ div.profilePicAndName {
     height: auto;
 }
 
+
 .container {
     height: auto;
     box-sizing: border-box;
@@ -548,6 +563,12 @@ div.profilePicAndName {
     padding-bottom: 2vh;
     padding-left: 2vw;
     padding-right: 2vw;
+}
+.container .artistLinksPadding {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 2vw;
+    padding-right: 0px;
 }
 
 .container.row:first-child {
@@ -560,6 +581,15 @@ div.profilePicAndName {
     border-top-width: 0px;
     border-top-left-radius: 0px;
     border-top-right-radius: 0px;
+}
+.artistLinksContainer {
+    width: 100%;
+}
+.artistRowContainerPadding {
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+    padding-left: 3vw;
+    padding-right: 3vw;
 }
 
 .row {
@@ -873,6 +903,22 @@ div.aboutMe {
     box-sizing: border-box;
     height: auto;
 	--num-of-columns: min(var(--colum-count), var(--max-columns,1000));
+    width: calc((100% / var(--num-of-columns)) - var(--margin-column-spaceing));
+}
+.artistSectionFlexWrap>div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    box-sizing: border-box;
+    text-decoration: none;
+    vertical-align: middle;
+    box-sizing: border-box;
+    height: auto;
+    --artist-colum-count: calc(var(--colum-count) - 1);
+	--num-of-columns: min(var(--artist-colum-count), var(--max-columns,1000));
     width: calc((100% / var(--num-of-columns)) - var(--margin-column-spaceing));
 }
 .sectionFlexWrap>div,
