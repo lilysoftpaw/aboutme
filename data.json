@@ -1,118 +1,221 @@
 {
-	"basicData": {
-		"name": "COMMING SOON",
-		"pronouns": "COMMING SOON",
-		"bio": [
-			"COMMING SOON",
-			"COMMING SOON"
-		]
-	},
-	"links": [
+	"basicData": {},
+	"sections": [
 		{
-			"reference": "https://osu.ppy.sh/users/28212610",
-			"logo": "assets/logos/osu.svg",
-			"extras": [],
-			"title": "Bido67",
-			"descTitle": "My Osu! Profile",
-			"desc": "I've been playing osu! since March 2023 (Addicted)"
+			"name": "Basic Info",
+			"style": "aboutSection_partial",
+			"data": {
+				"about": {
+					"name": "Lily Softpaws",
+					"pronouns": "She / Her",
+					"picture": "static/assets/user_picture.png"
+				},
+				"bio": [
+                    "Catgirl Furry~", 
+                    "Ambivert, mostly Introverted", 
+                    "🏳️‍⚧️ Trans Girl / Transfem 🏳️‍⚧️ (Transition in progress!)",
+                    "HRT SOON :3", 
+                    "Depressive bitch that doesn't even feel home at home...", 
+                    "No, I won't be your Discord girlfriend~ I'm already taken bitch~", 
+                    "Uhm I am either super friendly or a full on bitch. No in between.", 
+                    "If you piss me off I'm gonna be a bitch with you >:(", 
+                    " Acting friendly with me is the way to get me to be friendly with you :D", 
+                    "🏳️‍🌈 LGBTQ+ 🏳️‍🌈", "I like ducks :D", 
+                    "Warning: It's hard to tell if I'm being serious or not."
+                ]
+			}
 		},
 		{
-			"reference": "https://bsky.app/profile/lilysoftpaw.bsky.social",
-			"logo": "assets/user_picture.png",
-			"extras": [],
-			"title": "Lilysoftpaw",
-			"descTitle": "Bluesky",
-			"desc": "Bluesky > Twitter"
-		},
-		{
-			"reference": "https://twitch.tv/lilysoftpaw",
-			"logo": "assets/logos/twitch.svg",
-			"extras": [],
-			"title": "Lilysoftpaw",
-			"descTitle": "Twitch Affiliate",
-			"desc": "I've been affiliated on Twitch since May 2021"
-		},
-		{
-			"reference": "https://twitter.com/lilysoftpaw",
-			"logo": "assets/logos/twitter.svg",
-			"extras": [],
-			"title": "Lilysoftpaw",
-			"descTitle": "My Twitter",
-			"desc": "I post random shit here"
-		},
-		{
-			"reference": "https://youtube.com/@lilysoftpaw",
-			"logo": "assets/logos/youtube.svg",
-			"extras": [],
-			"title": "Lilysoftpaw",
-			"descTitle": "My channel",
-			"desc": "I don't really post things on youtube but hey you can sub if you want :3"
-		},
-		{
-			"reference": "https://github.com/lilysoftpaw",
-			"logo": "assets/logos/github.svg",
-			"extras": [],
-			"title": "Lilysoftpaw",
-			"descTitle": "My github :3",
-			"desc": "The repo to this page is in there :3"
-		},
-		{
-			"reference": "https://discord.gg/bnSrkHT",
-			"logo": "assets/discord_server_icons/ducklands.png",
-			"extras": ["discordExtras"],
-			"title": "Ducklands",
-			"descTitle": "My discord server!",
-			"desc": "Its kinda blown up... But you can still join. It holds  acertain value to me..."
-		},
-		{
-			"reference": "./static/projects/",
-			"logo": "assets/logos/github.svg",
-			"extras": [],
-			"title": "Projects",
-			"descTitle": "Projects Page",
-			"desc": "A list of my projects that I have done and published to github."
-		}
-	],
-	"info1": [
-		{
-			"title": "Name",
-			"data": ["Lily"]
+			"title": "Social Links",
+			"style": "linksSection_partial",
+			"data": [
+				{
+					"style": "linkCard_partial",
+					"reference": "https://osu.ppy.sh/users/28212610",
+					"logo": {
+						"haslogo": true,
+						"url": "assets/logos/osu.svg",
+						"crop": false
+					},
+					"extras": [],
+					"title": "Bido67",
+					"descTitle": "My Osu! Profile",
+					"desc": "I've been playing osu! since March 2023 (Addicted)"
+				},
+				{
+					"style": "linkCard_partial",
+					"reference": "https://bsky.app/profile/lilysoftpaw.bsky.social",
+					"logo": {
+						"haslogo": true,
+						"url": "assets/user_picture.png",
+						"crop": true
+					},
+					"extras": [],
+					"title": "Lilysoftpaw",
+					"descTitle": "Bluesky",
+					"desc": "Bluesky > Twitter"
+				},
+				{
+					"style": "linkCard_partial",
+					"reference": "https://twitch.tv/lilysoftpaw",
+					"logo": {
+						"haslogo": true,
+						"url": "assets/logos/twitch.svg",
+						"crop": false
+					},
+					"extras": [],
+					"title": "Lilysoftpaw",
+					"descTitle": "Twitch Affiliate",
+					"desc": "I've been affiliated on Twitch since May 2021"
+				},
+				{
+					"style": "linkCard_partial",
+					"reference": "https://twitter.com/lilysoftpaw",
+					"logo": {
+						"haslogo": true,
+						"url": "assets/logos/twitter.svg",
+						"crop": false
+					},
+					"extras": [],
+					"title": "Lilysoftpaw",
+					"descTitle": "My Twitter",
+					"desc": "I post random shit here"
+				},
+				{
+					"style": "linkCard_partial",
+					"reference": "https://youtube.com/@lilysoftpaw",
+					"logo": {
+						"haslogo": true,
+						"url": "assets/logos/youtube.svg",
+						"crop": false
+					},
+					"extras": [],
+					"title": "Lilysoftpaw",
+					"descTitle": "My channel",
+					"desc": "I don't really post things on youtube but hey you can sub if you want :3"
+				},
+				{
+					"style": "linkCard_partial",
+					"reference": "https://github.com/lilysoftpaw",
+					"logo": {
+						"haslogo": true,
+						"url": "assets/logos/github.svg",
+						"crop": false
+					},
+					"extras": [],
+					"title": "Lilysoftpaw",
+					"descTitle": "My github :3",
+					"desc": "The repo to this page is in there :3"
+				},
+				{
+					"style": "linkCard_partial",
+					"reference": "https://discord.gg/bnSrkHT",
+					"logo": {
+						"haslogo": true,
+						"url": "assets/discord_server_icons/ducklands.png",
+						"crop": true
+					},
+					"extras": ["discordExtras"],
+					"title": "Ducklands",
+					"descTitle": "My discord server!",
+					"desc": "Its kinda blown up... But you can still join. It holds  acertain value to me..."
+				},
+				{
+					"style": "linkCard_partial",
+					"reference": "./static/projects/",
+					"logo": {
+						"haslogo": true,
+						"url": "assets/logos/github.svg",
+						"crop": false
+					},
+					"extras": [],
+					"title": "Projects",
+					"descTitle": "Projects Page",
+					"desc": "A list of my projects that I have done and published to github."
+				}
+			]
 		},{
-			"title": "Pronouns",
-			"data": ["She","Her"]
-		},{
-			"title": "Nicknames",
-			"data": ["Lilysoftpaw"]
-		},{
-			"title": "Height",
-			"data": ["173 cm", "5'8", "68'"]
-		},{
-			"title": "Age",
-			"data": ["18"]
-		},{
-			"title": "Relationship status",
-			"data": ["Poly", "Pan","Taken :3"]
-		},{
-			"title": "Nationality",
-			"data": ["Canadian"]
-		},{
-			"title": "Sub Nationality",
-			"data": ["Québecoise"]
-		},{
-			"title": "Addictions",
-			"data": ["Osu!", "BLAHAJ!!!"]
-		}
-	],
-	"info2": [
-		{
-			"title": "Hobbies",
-			"data": ["Video games", "Being a dum dum", "Wasting my time", "Watching Twitch Streams (Vtubers)", "Coding random stuff"]
-		},{
-			"title": "Likes",
-			"data": ["Ducks", "Minecraft", "Programming", "Computers", "GETTING HEADPATS 🥺"]
-		},{
-			"title": "Dislikes",
-			"data": ["Fruits","Vegetables","Twitter artists begging for commissions"]
-		}
+            "title": "none",
+            "style": "basicInfoSection_partial",
+            "data":[
+                {
+                    "style": "listCard_partial",
+                    "dotted": false,
+                    "title": "Name",
+                    "data": ["Lily"]
+                },
+                {
+                    "style": "listCard_partial",
+                    "dotted": false,
+                    "title": "Pronouns",
+                    "data": ["She", "Her"]
+                },
+                {
+                    "style": "listCard_partial",
+                    "dotted": false,
+                    "title": "Nicknames",
+                    "data": ["Lilysoftpaw"]
+                },
+                {
+                    "style": "listCard_partial",
+                    "dotted": false,
+                    "title": "Height",
+                    "data": ["173 cm", "5'8", "68'"]
+                },
+                {
+                    "style": "listCard_partial",
+                    "dotted": false,
+                    "title": "Age",
+                    "data": ["18"]
+                },
+                {
+                    "style": "listCard_partial",
+                    "dotted": false,
+                    "title": "Relationship status",
+                    "data": ["Poly", "Pan", "Taken :3"]
+                },
+                {
+                    "style": "listCard_partial",
+                    "dotted": false,
+                    "title": "Nationality",
+                    "data": ["Canadian"]
+                },
+                {
+                    "style": "listCard_partial",
+                    "dotted": false,
+                    "title": "Sub Nationality",
+                    "data": ["Québecoise"]
+                },
+                {
+                    "style": "listCard_partial",
+                    "dotted": false,
+                    "title": "Addictions",
+                    "data": ["Osu!", "BLAHAJ!!!"]
+                }
+            ]
+        },{
+            "title": "none",
+            "style": "likesDislikesHobbiesSection_partial",
+            "data":[
+                {
+                    "style": "listCard_partial",
+                    "dotted": true,
+                    "title": "Hobbies",
+                    "data": ["Video games", "Being a dum dum", "Wasting my time", "Watching Twitch Streams (Vtubers)", "Coding random stuff"]
+                },
+                {
+                    "style": "listCard_partial",
+                    "dotted": true,
+                    "title": "Likes",
+                    "data": ["Ducks", "Minecraft", "Programming", "Computers", "GETTING HEADPATS 🥺"]
+                },
+                {
+                    "style": "listCard_partial",
+                    "dotted": true,
+                    "title": "Dislikes",
+                    "data": ["Fruits", "Vegetables", "Twitter artists begging for commissions"]
+                }
+            ]
+        }
 	]
 }

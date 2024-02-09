@@ -848,6 +848,11 @@ div.aboutMe {
     width: -webkit-fill-available !important;
     width: -moz-available !important;
 }
+.logo-crop{
+    border-radius: 50%;
+    padding-bottom: 0px !important;
+    margin-right: 5px;
+}
 #discordLogo {
     border-radius: 50%;
     background-color: #5865f2;

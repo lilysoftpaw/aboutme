@@ -1,0 +1,123 @@
+{{#*inline "linkCard_partial"}}
+    <div class="subContainer BoxStyle">
+        <div class="link noPadding">
+            <center>
+                <a href="{{link.reference}}">
+                    <div class="linkName">
+                        {{#if link.logo.haslogo}}
+                            <img src="{{assetsUrl}}{{link.logo.url}}" class="linkIcon {{#if link.logo.crop}}logo-crop{{/if}}" alt="Site Logo" height="24" width="29" />
+                        {{/if}}
+
+                        <h4>{{link.title}}</h4>
+                        <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="linkArrow" role="img" width="24" height="24" viewBox="0 0 24 24"><polygon fill="currentColor" fill-rule="nonzero" points="13 20 11 20 11 8 5.5 13.5 4.08 12.08 12 4.16 19.92 12.08 18.5 13.5 13 8"></polygon></svg>
+                    </div>
+                    <div class="linkDescriptionContainer">
+                        <h6 class="linkDescriptionTitle">{{link.descTitle}}</h6>
+                        <p class="linkDescriptionText">{{link.desc}}</p>
+                    </div>
+                </a>
+            </center>
+        </div>
+    </div>
+{{/inline}}
+{{#*inline "linksSection_partial"}}
+    <div id="links" class="BoxStyle rowContainer">
+        <div class="container row">
+            <h2 class="sectionTitle">{{section.title}}</h2>
+        </div>
+        <div id="linksContainerRow" class="container row">
+            <div class="sectionFlexWrap linksContainer">
+                {{#each section.data}}
+                    {{> (lookup . 'style') link=this assetsUrl=../assetsUrl }}
+                {{/each}}
+            </div>
+        </div>
+    </div>
+{{/inline}}
+{{#*inline "aboutCard_partial"}}
+    <div class="profilePicAndName BoxStyle">
+        <center>
+            <div class="pfpDiv"><img class="profilePicutre"
+                    src="{{about.picture}}"
+                    alt="Profile Picture" /></div>
+            <div class="pfpText">
+                <h1 class="nowrap">{{about.name}}</h1>
+                <h5 class="nowrap">{{about.pronouns}}</h5>
+            </div>
+        </center>
+    </div>
+{{/inline}}
+{{#*inline "bioCard_partial"}}
+    <div class="aboutMe fillAvailableSpace noPadding">
+        <center class="fillAvailableSpace">
+            <div class="subContainer BoxStyle noPadding">
+                <div class="section">
+                    <h2 class="aboutMe">About me</h2>
+                    <p class="aboutMe">
+                        {{#each lines}}
+                            {{this}}<br/>
+                        {{/each}}
+                    </p>
+                </div>
+            </div>
+        </center>
+    </div>
+{{/inline}}
+{{#*inline "aboutSection_partial"}}
+    <div id="pfpNameAndAboutMe" class="container rowFloatLeft noPadding">
+        {{> aboutCard_partial about=section.data.about assetsUrl=../assetsUrl}}
+        {{> bioCard_partial lines=section.data.bio assetsUrl=../assetsUrl}}
+    
+    </div>
+{{/inline}}
+{{#*inline "listCard_partial"}}
+    <div class="infoSubcontainer BoxStyle">
+	    <h4 class="sectionTitle">{{card.title}}</h4>
+        {{#if card.dotted}}
+            <ul>
+        {{/if}}
+	            {{#each card.data}}
+                    {{#if ../card.dotted}}
+                        <li>
+                    {{/if}}
+                            <p>{{this}}</p>
+                    {{#if ../card.dotted}}
+                        </li>
+                    {{/if}}
+                {{/each}}
+        {{#if card.dotted}}
+            </ul>
+        {{/if}}
+    </div>
+{{/inline}}
+{{#*inline "basicInfoSection_partial"}}
+    <div id="basicInfo" class="BoxStyle rowContainer">
+		<div class="container row">
+			<div class="section noPadding sectionFlexWrap infoContainerParent" style="--colum-count: 3">
+				{{#each section.data}}
+                    {{> (lookup . 'style') card=this assetsUrl=../assetsUrl }}
+                {{/each}}
+			</div>
+		</div>
+	</div>
+{{/inline}}
+{{#*inline "likesDislikesHobbiesSection_partial"}}
+        <div id="LikesDislikesHobbies" class="BoxStyle rowContainer">
+		    <div class="container row">
+			    <div class="section noPadding sectionFlexWrap">
+				    {{#each section.data}}
+                        {{> (lookup . 'style') card=this assetsUrl=../assetsUrl }}
+                    {{/each}}
+			    </div>
+		    </div>
+	    </div>
+{{/inline}}
+
+
+					
+
+
+
+{{#each data.sections}}
+    {{> (lookup . 'style') section=this assetsUrl=../assetsUrl}}
+{{/each}}

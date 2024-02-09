@@ -2,6 +2,7 @@ const express = require("express");
 const path = require("path");
 const fs = require("fs");
 const app = express();
+const handlebars = require("handlebars")
 /*const jsdom = require("jsdom");
 const { JSDOM } = jsdom;
 
@@ -54,20 +55,24 @@ app.get("/", async (request, resolve) => {
 	//console.log(pageTemplateDom.window.document.querySelector("head").querySelector(`meta[name="DiscordEmbed"]`))//.querySelectorAll(`div`).length)
 	pageTemplate = pageTemplate.replace("{discordEmbed}", discordEmbedTemplate);
 	pageTemplate = pageTemplate.replace("{twitterEmbed}",twitterEmbedCard);
-	let cardLinksData = JSON.parse(fs.readFileSync(path.join(__dirname, "data.json")).toString()).links;
+	let sectionsData = JSON.parse(fs.readFileSync(path.join(__dirname, "data.json")).toString()).sections;
 	let cards = ""
-	cardLinksData.forEach(card => {
+    let pageTest = fs.readFileSync("./handlebars/page.hbs").toString();
+    let pageTestCompile = handlebars.compile(pageTest);
+    pageCompiled = pageTestCompile({data: { embeds: {discord: {}, twitter:{}}, sections: sectionsData}, assetsUrl: assetsUrl});
+	/*cardLinksData.forEach(card => {
 		let linkCard = fs.readFileSync(path.join(__dirname, "templates/linkCard.html")).toString();
 	linkCard = replaceAll(linkCard, "{reference}", card.reference);
-	linkCard = replaceAll(linkCard, "{logo}", assetsUrl + card.logo);
+	linkCard = replaceAll(linkCard, "{logo}", assetsUrl + card.logo.url);
 	linkCard = replaceAll(linkCard, "{title}", card.title);
 	linkCard = replaceAll(linkCard, "{descTitle}", card.descTitle);
 	linkCard = replaceAll(linkCard, "{desc}", card.desc);
+	linkCard = replaceAll(linkCard, "{cropClass}", card.logo.crop == true ? " logo-crop" : "");
 	cards += linkCard;
 	
-	})
-	pageTemplate = pageTemplate.replace("{linkCards}", cards)
-	let cardInfoData1 = JSON.parse(fs.readFileSync(path.join(__dirname, "data.json")).toString()).info1;
+	})*/
+	pageTemplate = pageTemplate.replace("{sections}", pageCompiled)
+	/*let cardInfoData1 = JSON.parse(fs.readFileSync(path.join(__dirname, "data.json")).toString()).info1;
 	let cards2 = "";
 	cardInfoData1.forEach(card => {
 		let infoCard = fs.readFileSync(path.join(__dirname, "templates/infoCard1.html")).toString();
@@ -92,7 +97,7 @@ app.get("/", async (request, resolve) => {
 		//const SubscritionScript = BaseScript.replace("<url>","http://localhost:8081/endpoints/obs-overlay/subscribe");
 		//ParsedHTMLData.window.document.querySelector("#subscribeScript").innerHTML = SubscritionScript;
 		resolve.set('Content-Type', 'text/html');
-		//console.log(ParsedHTMLData.serialize());
+		//console.log(ParsedHTMLData.serialize());*/
 		resolve.send(pageTemplate);
 		
 
