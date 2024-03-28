@@ -1,0 +1,12 @@
+ <div id="links" class="BoxStyle rowContainer">
+        <div class="container row">
+            <h2 class="sectionTitle">{{section.title}}</h2>
+        </div>
+        <div id="linksContainerRow" class="container row">
+            <div class="sectionFlexWrap linksContainer">
+                {{#each section.data}}
+                    {{> (lookup . 'style') link=this assetsUrl=../assetsUrl }}
+                {{/each}}
+            </div>
+        </div>
+    </div>

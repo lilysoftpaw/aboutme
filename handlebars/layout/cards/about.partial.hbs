@@ -1,0 +1,25 @@
+<div class="profilePicAndName BoxStyle">
+        <center>
+        
+                {{#if artist}}
+                 <div class="pfpText">
+                        <h1 class="nowrap">{{about.name}}</h1>
+                </div>
+                        
+                {{/if}}
+           <div class="pfpDiv"><img class="profilePicutre"
+                    src="{{about.picture}}"
+                    alt="Profile Picture" /></div>
+            <div class="pfpText">
+                {{#if artist}}
+                        <h5>{{about.desc}}</h5>
+                {{else}}
+                        <h1 class="nowrap">{{about.name}}</h1>
+                        <h5 class="nowrap">{{about.pronouns}}</h5>
+                {{/if}}
+                        
+            </div>
+        
+            
+        </center>
+    </div>

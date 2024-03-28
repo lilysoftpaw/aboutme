@@ -1,15 +1,18 @@
 <div class="subContainer BoxStyle">
 	<div class="link noPadding">
 		<center>
-			<a href="{{reference}}">
+			<a href="{{link.reference}}">
 				<div class="linkName">
-					<img src="{{logo}}" class="linkIcon{cropClass}" alt="Site Logo" height="24" width="29" />
-					<h4>{title}</h4>
+                    {{#if link.logo.hasLogo}}
+                        <img src="{{link.logo.url}}" class="linkIcon {{#if link.logo.crop}}logo-crop{{/if}}" alt="Site Logo" height="24" width="29" />
+                    {{/if}}
+					
+					<h4>{{link.title}}</h4>
 					<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="linkArrow" role="img" width="24" height="24" viewBox="0 0 24 24"><polygon fill="currentColor" fill-rule="nonzero" points="13 20 11 20 11 8 5.5 13.5 4.08 12.08 12 4.16 19.92 12.08 18.5 13.5 13 8"></polygon></svg>
 				</div>
 				<div class="linkDescriptionContainer">
-					<h6 class="linkDescriptionTitle">{{descTitle}}</h6>
-					<p class="linkDescriptionText">{{desc}}</p>
+					<h6 class="linkDescriptionTitle">{{link.descTitle}}</h6>
+					<p class="linkDescriptionText">{{link.desc}}</p>
 				</div>
 			</a>
 		</center>

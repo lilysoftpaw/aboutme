@@ -1,1 +1,3 @@
-images/
+images/*
+.vscode/*
+node_modules/

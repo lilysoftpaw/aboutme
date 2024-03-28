@@ -1,0 +1,33 @@
+{{#*inline "linkCard_partial"}}
+   
+{{/inline}}
+{{#*inline "linksSection_partial"}}
+   
+{{/inline}}
+{{#*inline "aboutCard_partial"}}
+    
+{{/inline}}
+{{#*inline "bioCard_partial"}}
+
+{{/inline}}
+{{#*inline "aboutSection_partial"}}
+    
+{{/inline}}
+{{#*inline "listCard_partial"}}
+    
+{{/inline}}
+{{#*inline "basicInfoSection_partial"}}
+    
+{{/inline}}
+{{#*inline "likesDislikesHobbiesSection_partial"}}
+        
+{{/inline}}
+
+
+					
+
+
+
+{{#each data.sections}}
+    {{> (lookup . 'style') section=this assetsUrl=../assetsUrl}}
+{{/each}}
