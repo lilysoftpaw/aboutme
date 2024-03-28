@@ -1,0 +1,9 @@
+<div id="LikesDislikesHobbies" class="BoxStyle rowContainer">
+		    <div class="container row">
+			    <div class="section noPadding sectionFlexWrap">
+				    {{#each section.data}}
+                                        {{> (lookup . 'style') card=this assetsUrl=../assetsUrl }}
+                                     {{/each}}
+			    </div>
+		    </div>
+	    </div>

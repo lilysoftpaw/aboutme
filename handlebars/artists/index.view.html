@@ -1,0 +1,20 @@
+{{#extend "layout_main"}}
+    {{#content "head" mode="append"}}
+        {{> layout_parts_head title="Artists" embed_title="Lily's Artists" embed_description="Lily's Artists Page"}}
+    {{/content}}
+    {{#content "header" mode="append"}}
+        {{> layout_parts_header title="Artists" goBackButton=true}}
+    {{/content}}
+    {{#content "main" mode="append"}}
+        <center>
+                <div class="container column BoxStyle artistRowContainerPadding noPadding">
+                        {{#each data.artists}}
+                                {{> layout_panes_artist sections=this.sections assetsUrl=../assetsUrl artist=true}}
+                        {{/each}}
+                </div>
+        </center>
+    {{/content}}
+    {{#content "footer" mode="append"}}
+        {{> layout_parts_footer}}
+    {{/content}}
+{{/extend}}

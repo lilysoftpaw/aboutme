@@ -1,0 +1,9 @@
+<div class="header">
+        {{#if goBackButton}}
+        <div horizontal class="GoBackButton buttonStyle noPadding"><button type="button" onclick="window.location.replace('/');">Go Back</button></div>
+        <div vertical class="GoBackButton buttonStyle noPadding"><button type="button" onclick="window.location.replace('/');">Back</button></div>
+	{{/if}}
+        <center><div class="pageHeader">{{data.global.username}}'s {{title}}</div></center>
+	<div horizontal class="ThemeButton buttonStyle noPadding"><button class="buttonStyle" type="button" onclick="SwitchThemes();">Change Theme</button></div>
+	<div vertical class="ThemeButton buttonStyle noPadding"><button class="buttonStyle" type="button" onclick="SwitchThemes();">C.T.</button></div>
+</div>

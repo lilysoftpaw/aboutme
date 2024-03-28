@@ -1,0 +1,9 @@
+<div id="basicInfo" class="BoxStyle rowContainer">
+		<div class="container row">
+			<div class="section noPadding sectionFlexWrap infoContainerParent" style="--colum-count: 3">
+				{{#each section.data}}
+                    {{> (lookup . 'style') card=this assetsUrl=../assetsUrl }}
+                {{/each}}
+			</div>
+		</div>
+	</div>

@@ -1,0 +1,5 @@
+<div class="artist container rowFloatLeft noPadding">
+                                        {{#each sections}}
+                                                {{> (lookup . 'style') section=this assetsUrl=../assetsUrl artist=true}}
+                                        {{/each}}
+                                </div>

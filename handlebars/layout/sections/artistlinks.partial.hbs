@@ -1,0 +1,16 @@
+<div class="fillAvailableSpace noPadding">
+        <center class="fillAvailableSpace container column artistLinksPadding">
+                <div id="links" class="BoxStyle rowContainer">
+                        <div class="container row">
+                                <h2 class="sectionTitle">{{section.title}}</h2>
+                        </div>
+                        <div class="container row">
+                                <div class="artistSectionFlexWrap sectionFlexWrap linksContainer artistLinksContainer">
+                                        {{#each section.data}}
+                                                {{> (lookup . 'style') link=this assetsUrl=../assetsUrl }}
+                                        {{/each}}
+                                </div>
+                        </div>
+                </div>
+        </center>
+</div>

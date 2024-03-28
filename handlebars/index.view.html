@@ -1,0 +1,20 @@
+{{#extend "layout_main"}}
+    {{#content "head" mode="append"}}
+        {{> layout_parts_head title="About me / Bio / Pronouns page" embed_title="About me / Bio / Pronouns page" embed_description="Hehe Hello UwU!! I exist UwU!! I Shy Cat furry UwU!!"}}
+    {{/content}}
+    {{#content "header" mode="append"}}
+        {{> layout_parts_header title="About me / Bio / Pronouns page" goBackButton=false }}
+    {{/content}}
+    {{#content "main" mode="append"}}
+        <center>
+                <div class="container column">
+                        {{#each data.index.sections}}
+                                {{> (lookup . 'style') section=this assetsUrl=../assetsUrl artist=false}}
+                        {{/each}}
+                </div>
+        </center>       
+    {{/content}}
+    {{#content "footer" mode="append"}}
+        {{> layout_parts_footer}}
+    {{/content}}
+{{/extend}}

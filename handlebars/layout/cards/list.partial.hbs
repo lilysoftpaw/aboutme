@@ -1,0 +1,18 @@
+<div class="infoSubcontainer BoxStyle">
+	    <h4 class="sectionTitle">{{card.title}}</h4>
+        {{#if card.dotted}}
+            <ul>
+        {{/if}}
+	            {{#each card.data}}
+                    {{#if ../card.dotted}}
+                        <li>
+                    {{/if}}
+                            <p>{{this}}</p>
+                    {{#if ../card.dotted}}
+                        </li>
+                    {{/if}}
+                {{/each}}
+        {{#if card.dotted}}
+            </ul>
+        {{/if}}
+    </div>
