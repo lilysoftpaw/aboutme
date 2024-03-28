@@ -1,0 +1,21 @@
+{{#extend "layout_main"}}
+    {{#content "head" mode="append"}}
+        {{> layout_parts_head title="About me | 404 - Not Found"}}
+    {{/content}}
+    {{#content "header" mode="append"}}
+        {{> layout_parts_header title="About me | 404 - Not Found" goBackButton=true}}
+    {{/content}}
+    {{#content "main" mode="append"}}
+        <center>
+                <div class="container column">
+                        <center>
+                                <h2>Could not find this page...</h2>
+                                <h4>Note that this site is under construction by its owner.</h4>
+                        </center>
+                </div>
+        </center>       
+    {{/content}}
+    {{#content "footer" mode="append"}}
+        {{> layout_parts_footer}}
+    {{/content}}
+{{/extend}}
