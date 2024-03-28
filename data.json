@@ -1,221 +1,355 @@
 {
-	"basicData": {},
-	"sections": [
-		{
-			"name": "Basic Info",
-			"style": "aboutSection_partial",
-			"data": {
-				"about": {
-					"name": "Lily Softpaws",
-					"pronouns": "She / Her",
-					"picture": "static/assets/user_picture.png"
-				},
-				"bio": [
-                    "Catgirl Furry~", 
-                    "Ambivert, mostly Introverted", 
-                    "🏳️‍⚧️ Trans Girl / Transfem 🏳️‍⚧️ (Transition in progress!)",
-                    "HRT SOON :3", 
-                    "Depressive bitch that doesn't even feel home at home...", 
-                    "No, I won't be your Discord girlfriend~ I'm already taken bitch~", 
-                    "Uhm I am either super friendly or a full on bitch. No in between.", 
-                    "If you piss me off I'm gonna be a bitch with you >:(", 
-                    " Acting friendly with me is the way to get me to be friendly with you :D", 
-                    "🏳️‍🌈 LGBTQ+ 🏳️‍🌈", "I like ducks :D", 
-                    "Warning: It's hard to tell if I'm being serious or not."
+        "global": {
+                "username": "Lily",
+                "head":{
+                        "embeds": {
+                                "discord": {
+                                        "title": "Meow meow meow meow meow c:",
+                                        "description": "Meow c:",
+                                        "url": "{{accessUrl}}",
+                                        "iconUrl": "static/assets/user_picture.png",
+                                        "color": "#8c05c1"
+                                },
+                                "twitter":{
+                                        "username": "lilysoftpaw"
+                                }
+                        },
+                        "googleAnalyticsTag": "G-XXPCL2D1Q3",
+                        "msAppNavColor": "#8c05c1"
+                }
+        },
+        "artists":[
+                {
+                        "sections": [
+                                {
+                                        "name": "Basic Info",
+                                        "style": "layout_sections_aboutartist",
+                                        "data": {
+                                                "about": {
+                                                        "name": "Shini",
+                                                        "desc":"Vtuber Parent / Artist for my v2 Model!",
+                                                        "picture": "/static/assets/artists/Shini_pfp.webp"
+                                                }
+                                        }
+                                },
+                                {
+                                        "title": "Their social links:",
+                                        "style": "layout_sections_artistlinks",
+                                        "data": [
+                                                {
+                                                        "style": "layout_cards_link",
+                                                        "reference": "https://vgen.co/hikarishini",
+                                                        "logo": {
+                                                                "haslogo": true,
+                                                                "url": "assets/logos/vgen.svg",
+                                                                "crop": false
+                                                        },
+                                                        "extras": [],
+                                                        "title": "Shini on Vgen",
+                                                        "descTitle": "Vgen for commissions",
+                                                        "desc": ""
+                                                },{
+                                                        "style": "layout_cards_link",
+                                                        "reference": "https://twitter.com/hikarishini",
+                                                        "logo": {
+                                                                "haslogo": true,
+                                                                "url": "assets/logos/twitter.svg",
+                                                                "crop": false
+                                                        },
+                                                        "extras": [],
+                                                        "title": "Shini on Twitter",
+                                                        "descTitle": "Twitter",
+                                                        "desc": "Shini's twitter!"
+                                                },
+                                                {
+                                                        "style": "layout_cards_link",
+                                                        "reference": "https://discord.gg/zVbHxm592G",
+                                                        "logo": {
+                                                                "haslogo": true,
+                                                                "url": "assets/logos/discord.svg",
+                                                                "crop": true
+                                                        },
+                                                        "extras": ["discordExtras"],
+                                                        "title": "Shini's Discord",
+                                                        "descTitle": "Discord",
+                                                        "desc": "Shini's discord server!"
+                                                }
+                                        ]
+                                }
+                        ]
+                }
+        ],
+        "index":{
+                "sections": [
+                        {
+                                "name": "Basic Info",
+                                "style": "layout_sections_about",
+                                "data": {
+                                        "about": {
+                                                "name": "Lily Softpaws",
+                                                "pronouns": "She / Her",
+                                                "picture": "static/assets/user_picture.png"
+                                        },
+                                        "bio": [
+                            "Catgirl Furry~", 
+                            "Ambivert, mostly Introverted", 
+                            "🏳️‍⚧️ Trans Girl / Transfem 🏳️‍⚧️ (Transition in progress!)",
+                            "HRT SOON :3", 
+                            "Depressive bitch that doesn't even feel home at home...", 
+                            "No, I won't be your Discord girlfriend~ I'm already taken bitch~", 
+                            "Uhm I am either super friendly or a full on bitch. No in between.", 
+                            "If you piss me off I'm gonna be a bitch with you >:(", 
+                            " Acting friendly with me is the way to get me to be friendly with you :D", 
+                            "🏳️‍🌈 LGBTQ+ 🏳️‍🌈", "I like ducks :D", 
+                            "Warning: It's hard to tell if I'm being serious or not."
+                        ]
+                                }
+                        },
+                        {
+                                "title": "Social Links",
+                                "style": "layout_sections_links",
+                                "data": [
+                                        {
+                                                "style": "layout_cards_link",
+                                                "reference": "https://osu.ppy.sh/users/28212610",
+                                                "logo": {
+                                                        "haslogo": true,
+                                                        "url": "assets/logos/osu.svg",
+                                                        "crop": false
+                                                },
+                                                "extras": [],
+                                                "title": "Bido67",
+                                                "descTitle": "My Osu! Profile",
+                                                "desc": "I've been playing osu! since March 2023 (Addicted)"
+                                        },
+                                        {
+                                                "style": "layout_cards_link",
+                                                "reference": "https://docs.google.com/document/d/1a71vmYTvne1bchhmEhM9oy25_8omCmP0NPCJMvfMVLo/edit?usp=sharing",
+                                                "logo": {
+                                                        "haslogo": false,
+                                                        "url": "assets/user_picture.png",
+                                                        "crop": true
+                                                },
+                                                "extras": [],
+                                                "title": "Furrsona Documentation Sheet",
+                                                "descTitle": "The google docs reference for my fursona",
+                                                "desc": "If you want to draw my furrsona :3"
+                                        },
+                                        {
+                                                "style": "layout_cards_link",
+                                                "reference": "/static/assets/sona_refsheet.png",
+                                                "logo": {
+                                                        "haslogo": false,
+                                                        "url": "assets/user_picture.png",
+                                                        "crop": true
+                                                },
+                                                "extras": [],
+                                                "title": "Furrsona Reference Sheet",
+                                                "descTitle": "The reference sheet for my fursona",
+                                                "desc": "If you want to draw my furrsona :3"
+                                        },
+                                        {
+                                                "style": "layout_cards_link",
+                                                "reference": "https://bsky.app/profile/lilysoftpaw.bsky.social",
+                                                "logo": {
+                                                        "haslogo": false,
+                                                        "url": "assets/user_picture.png",
+                                                        "crop": true
+                                                },
+                                                "extras": [],
+                                                "title": "Lilysoftpaw",
+                                                "descTitle": "Bluesky",
+                                                "desc": "Bluesky > Twitter"
+                                        },
+                                        {
+                                                "style": "layout_cards_link",
+                                                "reference": "https://twitch.tv/lilysoftpaw",
+                                                "logo": {
+                                                        "haslogo": true,
+                                                        "url": "assets/logos/twitch.svg",
+                                                        "crop": false
+                                                },
+                                                "extras": [],
+                                                "title": "Lilysoftpaw",
+                                                "descTitle": "Twitch Affiliate",
+                                                "desc": "I've been affiliated on Twitch since May 2021"
+                                        },
+                                        {
+                                                "style": "layout_cards_link",
+                                                "reference": "/artists/",
+                                                "logo": {
+                                                        "haslogo": false,
+                                                        "url": "assets/logos/twitch.svg",
+                                                        "crop": false
+                                                },
+                                                "extras": [],
+                                                "title": "Artists",
+                                                "descTitle": "Artists I've done business with",
+                                                "desc": "List of artists that I've commissioned / done business with for art :3"
+                                        },
+                                        {
+                                                "style": "layout_cards_link",
+                                                "reference": "https://twitter.com/lilysoftpaw",
+                                                "logo": {
+                                                        "haslogo": true,
+                                                        "url": "assets/logos/twitter.svg",
+                                                        "crop": false
+                                                },
+                                                "extras": [],
+                                                "title": "Lilysoftpaw",
+                                                "descTitle": "My Twitter",
+                                                "desc": "I post random shit here"
+                                        },
+                                        {
+                                                "style": "layout_cards_link",
+                                                "reference": "https://youtube.com/@lilysoftpaw",
+                                                "logo": {
+                                                        "haslogo": true,
+                                                        "url": "assets/logos/youtube.svg",
+                                                        "crop": false
+                                                },
+                                                "extras": [],
+                                                "title": "Lilysoftpaw",
+                                                "descTitle": "My channel",
+                                                "desc": "I don't really post things on youtube but hey you can sub if you want :3"
+                                        },
+                                        {
+                                                "style": "layout_cards_link",
+                                                "reference": "https://github.com/lilysoftpaw",
+                                                "logo": {
+                                                        "haslogo": true,
+                                                        "url": "assets/logos/github.svg",
+                                                        "crop": false
+                                                },
+                                                "extras": [],
+                                                "title": "Lilysoftpaw",
+                                                "descTitle": "My github :3",
+                                                "desc": "The repo to this page is in there :3"
+                                        },
+                                        {
+                                                "style": "layout_cards_link",
+                                                "reference": "https://discord.gg/bnSrkHT",
+                                                "logo": {
+                                                        "haslogo": true,
+                                                        "url": "assets/discord_server_icons/ducklands.png",
+                                                        "crop": true
+                                                },
+                                                "extras": ["discordExtras"],
+                                                "title": "Ducklands",
+                                                "descTitle": "My discord server!",
+                                                "desc": "Its kinda blown up... But you can still join. It holds  acertain value to me..."
+                                        },
+                                        {
+                                                "style": "layout_cards_link",
+                                                "reference": "https://tiktok.com/@lilysoftpaw",
+                                                "logo": {
+                                                        "haslogo": true,
+                                                        "url": "assets/logos/tiktok.svg",
+                                                        "crop": false
+                                                },
+                                                "extras": [],
+                                                "title": "Lilysoftpaw",
+                                                "descTitle": "My tiktok",
+                                                "desc": "I don't really use this."
+                                        },
+                                        {
+                                                "style": "layout_cards_link",
+                                                "reference": "./static/projects/",
+                                                "logo": {
+                                                        "haslogo": true,
+                                                        "url": "assets/logos/github.svg",
+                                                        "crop": false
+                                                },
+                                                "extras": [],
+                                                "title": "Projects",
+                                                "descTitle": "Projects Page",
+                                                "desc": "A list of my projects that I have done and published to github."
+                                        }
+                                ]
+                        },{
+                    "title": "none",
+                    "style": "layout_sections_basicInfo",
+                    "data":[
+                        {
+                            "style": "layout_cards_list",
+                            "dotted": false,
+                            "title": "Name",
+                            "data": ["Lily"]
+                        },
+                        {
+                            "style": "layout_cards_list",
+                            "dotted": false,
+                            "title": "Pronouns",
+                            "data": ["She", "Her"]
+                        },
+                        {
+                            "style": "layout_cards_list",
+                            "dotted": false,
+                            "title": "Nicknames",
+                            "data": ["Lilysoftpaw"]
+                        },
+                        {
+                            "style": "layout_cards_list",
+                            "dotted": false,
+                            "title": "Height",
+                            "data": ["173 cm", "5'8", "68'"]
+                        },
+                        {
+                            "style": "layout_cards_list",
+                            "dotted": false,
+                            "title": "Age",
+                            "data": ["19"]
+                        },
+                        {
+                            "style": "layout_cards_list",
+                            "dotted": false,
+                            "title": "Relationship status",
+                            "data": ["Poly", "Pan", "Taken :3"]
+                        },
+                        {
+                            "style": "layout_cards_list",
+                            "dotted": false,
+                            "title": "Nationality",
+                            "data": ["Canadian"]
+                        },
+                        {
+                            "style": "layout_cards_list",
+                            "dotted": false,
+                            "title": "Sub Nationality",
+                            "data": ["Québecoise"]
+                        },
+                        {
+                            "style": "layout_cards_list",
+                            "dotted": false,
+                            "title": "Addictions",
+                            "data": ["Osu!", "BLAHAJ!!!"]
+                        }
+                    ]
+                },{
+                    "title": "none",
+                    "style": "layout_sections_likesDislikesHobbies",
+                    "data":[
+                        {
+                            "style": "layout_cards_list",
+                            "dotted": true,
+                            "title": "Hobbies",
+                            "data": ["Video games", "Being a dum dum", "Wasting my time", "Watching Twitch Streams (Vtubers)", "Coding random stuff"]
+                        },
+                        {
+                            "style": "layout_cards_list",
+                            "dotted": true,
+                            "title": "Likes",
+                            "data": ["Ducks", "Minecraft", "Programming", "Computers", "GETTING HEADPATS 🥺"]
+                        },
+                        {
+                            "style": "layout_cards_list",
+                            "dotted": true,
+                            "title": "Dislikes",
+                            "data": ["Fruits", "Vegetables", "Twitter artists begging for commissions"]
+                        }
+                    ]
+                }
                 ]
-			}
-		},
-		{
-			"title": "Social Links",
-			"style": "linksSection_partial",
-			"data": [
-				{
-					"style": "linkCard_partial",
-					"reference": "https://osu.ppy.sh/users/28212610",
-					"logo": {
-						"haslogo": true,
-						"url": "assets/logos/osu.svg",
-						"crop": false
-					},
-					"extras": [],
-					"title": "Bido67",
-					"descTitle": "My Osu! Profile",
-					"desc": "I've been playing osu! since March 2023 (Addicted)"
-				},
-				{
-					"style": "linkCard_partial",
-					"reference": "https://bsky.app/profile/lilysoftpaw.bsky.social",
-					"logo": {
-						"haslogo": true,
-						"url": "assets/user_picture.png",
-						"crop": true
-					},
-					"extras": [],
-					"title": "Lilysoftpaw",
-					"descTitle": "Bluesky",
-					"desc": "Bluesky > Twitter"
-				},
-				{
-					"style": "linkCard_partial",
-					"reference": "https://twitch.tv/lilysoftpaw",
-					"logo": {
-						"haslogo": true,
-						"url": "assets/logos/twitch.svg",
-						"crop": false
-					},
-					"extras": [],
-					"title": "Lilysoftpaw",
-					"descTitle": "Twitch Affiliate",
-					"desc": "I've been affiliated on Twitch since May 2021"
-				},
-				{
-					"style": "linkCard_partial",
-					"reference": "https://twitter.com/lilysoftpaw",
-					"logo": {
-						"haslogo": true,
-						"url": "assets/logos/twitter.svg",
-						"crop": false
-					},
-					"extras": [],
-					"title": "Lilysoftpaw",
-					"descTitle": "My Twitter",
-					"desc": "I post random shit here"
-				},
-				{
-					"style": "linkCard_partial",
-					"reference": "https://youtube.com/@lilysoftpaw",
-					"logo": {
-						"haslogo": true,
-						"url": "assets/logos/youtube.svg",
-						"crop": false
-					},
-					"extras": [],
-					"title": "Lilysoftpaw",
-					"descTitle": "My channel",
-					"desc": "I don't really post things on youtube but hey you can sub if you want :3"
-				},
-				{
-					"style": "linkCard_partial",
-					"reference": "https://github.com/lilysoftpaw",
-					"logo": {
-						"haslogo": true,
-						"url": "assets/logos/github.svg",
-						"crop": false
-					},
-					"extras": [],
-					"title": "Lilysoftpaw",
-					"descTitle": "My github :3",
-					"desc": "The repo to this page is in there :3"
-				},
-				{
-					"style": "linkCard_partial",
-					"reference": "https://discord.gg/bnSrkHT",
-					"logo": {
-						"haslogo": true,
-						"url": "assets/discord_server_icons/ducklands.png",
-						"crop": true
-					},
-					"extras": ["discordExtras"],
-					"title": "Ducklands",
-					"descTitle": "My discord server!",
-					"desc": "Its kinda blown up... But you can still join. It holds  acertain value to me..."
-				},
-				{
-					"style": "linkCard_partial",
-					"reference": "./static/projects/",
-					"logo": {
-						"haslogo": true,
-						"url": "assets/logos/github.svg",
-						"crop": false
-					},
-					"extras": [],
-					"title": "Projects",
-					"descTitle": "Projects Page",
-					"desc": "A list of my projects that I have done and published to github."
-				}
-			]
-		},{
-            "title": "none",
-            "style": "basicInfoSection_partial",
-            "data":[
-                {
-                    "style": "listCard_partial",
-                    "dotted": false,
-                    "title": "Name",
-                    "data": ["Lily"]
-                },
-                {
-                    "style": "listCard_partial",
-                    "dotted": false,
-                    "title": "Pronouns",
-                    "data": ["She", "Her"]
-                },
-                {
-                    "style": "listCard_partial",
-                    "dotted": false,
-                    "title": "Nicknames",
-                    "data": ["Lilysoftpaw"]
-                },
-                {
-                    "style": "listCard_partial",
-                    "dotted": false,
-                    "title": "Height",
-                    "data": ["173 cm", "5'8", "68'"]
-                },
-                {
-                    "style": "listCard_partial",
-                    "dotted": false,
-                    "title": "Age",
-                    "data": ["19"]
-                },
-                {
-                    "style": "listCard_partial",
-                    "dotted": false,
-                    "title": "Relationship status",
-                    "data": ["Poly", "Pan", "Taken :3"]
-                },
-                {
-                    "style": "listCard_partial",
-                    "dotted": false,
-                    "title": "Nationality",
-                    "data": ["Canadian"]
-                },
-                {
-                    "style": "listCard_partial",
-                    "dotted": false,
-                    "title": "Sub Nationality",
-                    "data": ["Québecoise"]
-                },
-                {
-                    "style": "listCard_partial",
-                    "dotted": false,
-                    "title": "Addictions",
-                    "data": ["Osu!", "BLAHAJ!!!"]
-                }
-            ]
-        },{
-            "title": "none",
-            "style": "likesDislikesHobbiesSection_partial",
-            "data":[
-                {
-                    "style": "listCard_partial",
-                    "dotted": true,
-                    "title": "Hobbies",
-                    "data": ["Video games", "Being a dum dum", "Wasting my time", "Watching Twitch Streams (Vtubers)", "Coding random stuff"]
-                },
-                {
-                    "style": "listCard_partial",
-                    "dotted": true,
-                    "title": "Likes",
-                    "data": ["Ducks", "Minecraft", "Programming", "Computers", "GETTING HEADPATS 🥺"]
-                },
-                {
-                    "style": "listCard_partial",
-                    "dotted": true,
-                    "title": "Dislikes",
-                    "data": ["Fruits", "Vegetables", "Twitter artists begging for commissions"]
-                }
-            ]
         }
-	]
+	
 }
