@@ -23,10 +23,6 @@ class DOMParser {
 })*/
 
 
-function ReadDirectory(dir){
-        fs.readdirSync("/website")
-}
-
 
 
 
@@ -35,13 +31,6 @@ const embedTitle = "Lily's About me / Bio / Pronouns page";
 const embedDescription = "Hehe Hello UwU!! I exist UwU!! I Shy Cat furry UwU!!"
 const embedColor = "#8c05c1";
 const assetsUrl = "/static/"
-function createData(cardType, data){
-	let returnData = "";
-	data.forEach((item) => {
-		returnData += `${cardType == 2 ? "<li>" : ""}<p>${item}</p>${cardType == 2 ? "</li>" : ""}`;
-	})
-	return returnData
-}
 /*const cardLinksData = [
 	{
 		reference: "./projects",
@@ -67,7 +56,7 @@ app.get("/test", async (request, resolve) => {
 	pageTemplate = pageTemplate.replace("{twitterEmbed}",twitterEmbedCard);
 	let sectionsData = JSON.parse(fs.readFileSync(path.join(__dirname, "data.json")).toString()).sections;
 	let cards = ""
-        let pageTest = fs.readFileSync("./handlebars/page.hbs").toString();
+        let pageTest = fs.readFileSync(path.join(__dirname,"./handlebars/page.hbs")).toString();
         let pageTestCompile = handlebars.compile(pageTest);
         pageCompiled = pageTestCompile({data: { embeds: {discord: {}, twitter:{}}, sections: sectionsData}, assetsUrl: assetsUrl});
 	/*cardLinksData.forEach(card => {
@@ -152,7 +141,7 @@ app.use("/static/", express.static(path.join(__dirname, "staticFiles")));
 
 module.exports = app;
 
-filewalker("/handlebars", null, (err, res) => {
+filewalker(path.join(__dirname,"/handlebars"), null, (err, res) => {
         console.log(err, JSON.stringify(res, null,  "\t"));
         if(err){
                 console.log(e);
@@ -185,7 +174,7 @@ filewalker("/handlebars", null, (err, res) => {
         app.use(function(request, resolve) {
                 // Invalid request
                 console.log(`${request.protocol}://${request.get('host')}${request.originalUrl}`);
-                let page404 = handlebars.compile(fs.readFileSync("./404.html", 'utf8'))
+                let page404 = handlebars.compile(fs.readFileSync(path.join(__dirname,"./404.html"), 'utf8'))
                 readData();
                         pageData = {
                                 title: " About me | 404 - not found",
