@@ -150,7 +150,7 @@ app.use("/static/", express.static(path.join(__dirname, "staticFiles")));
 
 module.exports = app;
 
-filewalker("handlebars", null, (err, res) => {
+filewalker("/handlebars", null, (err, res) => {
         console.log(err, JSON.stringify(res, null,  "\t"));
         if(err){
                 console.log(e);
