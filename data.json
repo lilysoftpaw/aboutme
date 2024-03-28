@@ -7,7 +7,7 @@
                                         "title": "Meow meow meow meow meow c:",
                                         "description": "Meow c:",
                                         "url": "{{accessUrl}}",
-                                        "iconUrl": "static/assets/user_picture.png",
+                                        "iconUrl": "/static/assets/user_picture.png",
                                         "color": "#8c05c1"
                                 },
                                 "twitter":{

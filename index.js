@@ -162,6 +162,7 @@ filewalker(path.join(__dirname,"/handlebars"), null, (err, res) => {
                                 accessUrl: `${request.protocol}://${request.get('host')}${request.originalUrl}`
                         }
                         pageData.data.global.head.embeds.discord.url = `${request.protocol}://${request.get('host')}${request.originalUrl}`;
+                        pageData.data.global.head.embeds.discord.iconUrl= `${request.protocol}://${request.get('host')}` + pageData.data.global.head.embeds.discord.iconUrl;
                         let output = pageHandleBar(pageData)
                         resolve.send(output);
                 }
@@ -183,6 +184,7 @@ filewalker(path.join(__dirname,"/handlebars"), null, (err, res) => {
                                 accessUrl: `${request.protocol}://${request.get('host')}${request.originalUrl}`
                         }
                         pageData.data.global.head.embeds.discord.url = `${request.protocol}://${request.get('host')}${request.originalUrl}`;
+                        pageData.data.global.head.embeds.discord.iconUrl= `${request.protocol}://${request.get('host')}` + pageData.data.global.head.embeds.discord.iconUrl;
                       let output = page404(pageData);
                       resolve.send(output);
                 });
