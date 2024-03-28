@@ -21,12 +21,17 @@ class DOMParser {
 })*/
 
 
+function ReadDirectory(dir){
+        fs.readdirSync("/website")
+}
+
+
+
 
 const domain = "aboutme.vercel.lilysoftpaw.com";
 const embedTitle = "Lily's About me / Bio / Pronouns page";
 const embedDescription = "Hehe Hello UwU!! I exist UwU!! I Shy Cat furry UwU!!"
 const embedColor = "#8c05c1";
-const assetsUrl = "./static/"
 const assetsUrl = "/static/"
 function createData(cardType, data){
 	let returnData = "";
