@@ -6,6 +6,8 @@ const handlebars = require("handlebars")
 const layouts = require('handlebars-layouts');
 handlebars.registerHelper(layouts(handlebars));
 const {filewalker} = require("./filewalker");
+console.log(fs.readdirSync())
+console.log(process.cwd())
 /*const jsdom = require("jsdom");
 const { JSDOM } = jsdom;
 
