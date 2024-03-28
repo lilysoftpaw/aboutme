@@ -13,6 +13,8 @@
     "decimal.js": "^10.4.3",
     "express": "^4.18.2",
     "handlebars": "^4.7.8",
+    "handlebars-helpers": "^0.10.0",
+    "handlebars-layouts": "^3.1.4",
     "jsdom": "^23.0.1"
   }
 }
