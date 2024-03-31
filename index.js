@@ -170,6 +170,23 @@ filewalker(path.join(__dirname,"/handlebars"), null, (err, res) => {
                         app.get(accessUrl, resolver)
                 })
         })
+        app.get("/kittenzexe", (request, resolve) => {
+                console.log(`${request.protocol}://${request.get('host')}${request.originalUrl}`);
+                let page404 = handlebars.compile(fs.readFileSync(path.join(__dirname,"./404.html"), 'utf8'))
+                readData();
+                        pageData = {
+                                title: " About me | 404 - not found",
+                                embed_title: "About me | 404 - not found",
+                                embed_description: "Bluey is funny, shittenz is cute and has a cute voice",
+                                data: global.data, 
+                                assetsUrl: assetsUrl,
+                                accessUrl: `${request.protocol}://${request.get('host')}${request.originalUrl}`
+                        }
+                        pageData.data.global.head.embeds.discord.url = `${request.protocol}://${request.get('host')}${request.originalUrl}`;
+                        pageData.data.global.head.embeds.discord.iconUrl= `${request.protocol}://${request.get('host')}` + pageData.data.global.head.embeds.discord.iconUrl;
+                      let output = page404(pageData);
+                      resolve.send(output);
+        })
         app.use(function(request, resolve) {
                 // Invalid request
                 console.log(`${request.protocol}://${request.get('host')}${request.originalUrl}`);
