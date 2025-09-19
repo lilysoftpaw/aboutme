@@ -23,7 +23,7 @@
     --scrollbar-width: 10px;
     --border-width: 2px;
     --border-radius: 10px;
-    --page-font-family: Comic Sans Ms, Arial;
+    --page-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Arial, sans-serif;
     --scale: 1;
     --scale-vertical: .5;
     --margin-column-spaceing: 10px;
